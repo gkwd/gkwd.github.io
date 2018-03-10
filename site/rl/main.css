@@ -1,0 +1,44 @@
+
+#exp{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content#righter{
+    flex-grow: 1;
+    background-color: lightgreen;
+}
+
+.content#lefter{
+    flex-grow: 2;
+    background-color: lightcoral;
+}
+
+.box_left{
+        border: 2px solid black;
+    height: 85%;
+    flex-grow: 2;
+    margin: 20px;
+}
+
+.box_right{
+    height: 85%;
+    flex-grow: 1;
+    margin: 20px;
+        border: 2px solid black;
+}
+
+
+
+
