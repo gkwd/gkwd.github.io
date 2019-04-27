@@ -62,8 +62,9 @@
 $('.slider_block').slick({
     vertical: true,
     autoplay: false,
-    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous slide" tabindex="0" role="button"></button>',
-    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next slide" tabindex="0" role="button"></button>',
+    infinite: false,
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous slide" tabindex="0" role="button"><i class="fas fa-chevron-up"></i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next slide" tabindex="0" role="button"><i class="fas fa-chevron-down"></i></button>',
     dots: true,
     speed: 500,
     useTransform: true,
