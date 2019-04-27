@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
     <title>Socks</title>
@@ -18,8 +17,7 @@
     <header>
         <div class="navigation container">
             <div class="logo">
-                <img src="" alt="" class="logo_img">
-                <span>Logo</span>
+                <img src="img/logo.png" alt="" class="logo_img">
             </div>
             <nav class="nav_bar">
                 <ul class="nav_list">
@@ -41,7 +39,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.</p>
 
-                <button class="send_info">Press ME</button>
+                <button class="btn">Подать заявку</button>
             </div>
 
         </div>
@@ -80,7 +78,8 @@
             <div class="advantage">
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-socks"></i>
+                    <!-- <i class="fas fa-socks"></i> -->
+                    <img src="img/Rectangle-4 (1).png" alt="" srcset="">
                 </div>
                 <div class="advantageItem__title">Индивидуальный подход к каждому клиенту</div>
                 <div class="advantageItem__text">Поможем составить техническое задание, продумаем или доведем до идеала
@@ -88,7 +87,8 @@
               </div>
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-thumbs-up"></i>
+                    <!-- <i class="fas fa-thumbs-up"></i> -->
+                    <img src="img/Rectangle-7.png" alt="" srcset="">
                 </div>
                 <div class="advantageItem__title">Минимальное время формирования партии</div>
                 <div class="advantageItem__text">Срок формирования партии с свободного склада — от 3 до 7 рабочих дней.
@@ -96,7 +96,8 @@
               </div>
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-poll"></i>
+                    <!-- <i class="fas fa-poll"></i> -->
+                    <img src="img/Rectangle-5.png" alt="" srcset="">
                 </div>
                 <div class="advantageItem__title">Производство любого количества изделий под заказ</div>
                 <div class="advantageItem__text">Минимальная партия для заказа — 200 пар. Стоимость заказа оговаривается в
@@ -104,7 +105,8 @@
               </div>
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-heart"></i>
+                    <!-- <i class="fas fa-heart"></i> -->
+                    <img src="img/Rectangle-6.png" alt="" srcset="">
                 </div>
                 <div class="advantageItem__title">Без посредников. Вы работаете напрямую с производителем</div>
                 <div class="advantageItem__text">Предприятие имеет собственную производственную базу и складские
@@ -121,7 +123,8 @@
             <div class="advantage">
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-boxes"></i>
+                    <!-- <i class="fas fa-boxes"></i> -->
+                    <img src="img/Rectangle-3.png" alt="">
                 </div>
                 <div class="advantageItem__title">Сроки производства</div>
                 <div class="advantageItem__text">10-15 рабочих дней с момента утверждения образца на носки по вашему
@@ -131,7 +134,8 @@
               </div>
               <div class="advantageItem">
                 <div class="advantageItem__img">
-                    <i class="fas fa-stopwatch"></i>
+                    <!-- <i class="fas fa-stopwatch"></i> -->
+                    <img src="img/Rectangle-1.png" alt="" srcset="">
                 </div>
                 <div class="advantageItem__title">Упаковка продукции</div>
                 <div class="advantageItem__text">Предложим разные варианты упаковки для носков или комплекта носков.
@@ -150,7 +154,8 @@
             <div class="delivery">
               <div class="deliveryItem">
                 <div class="deliveryItem__img">
-                    <i class="fas fa-truck"></i>
+                    <!-- <i class="fas fa-truck"></i> -->
+                    <img src="img/Rectangle 2.png" alt="" srcset="">
                 </div>
                 <div class="deliveryItem__title">Способ доставки — транспортными компаниями </div>
                 <div class="deliveryItem__text">
@@ -211,7 +216,7 @@
         <div class="screen6">
           <div class="container">
             <div class="contacts">
-              <div class="contacts-info">
+              <!-- <div class="contacts-info">
                 <div class="contactsItem">
                   <div class="contactsItem__title">Контактная информация</div>
                   <div class="contactsItem__text">Компания «Московская чулочная фабрика» <br>Наш офис и производство
@@ -222,10 +227,23 @@
                       href="mailto:info@moschulfab.ru">info@moschulfab.ru</a></div>
                   <div class="contactsItem__text">Наш телефон +7 (495) 201-1683</div>
                 </div>
-              </div>
+              </div> -->
+              
               <div class="contacts-forms">
+
+                  <form class="form form_feedback" method="post" id="feedback-two" enctype="multipart/form-data">
+                    <div class="form__title">Написать нам </div>
+                    <div class="form__form">
+                      <input type="text" name="nameFF" id="nameFF" x-autocompletetype="name" placeholder="Введите ваше имя">
+                      <input type="email" name="contactFF" id="contactFF" required x-autocompletetype="email"
+                        placeholder="Введите вашу эл.почту">
+                      <textarea type="text" placeholder="Введите ваше сообщение" name="messageFF" id="messageFF"></textarea>
+                      <button type="submit" class="btn">Отправить</button>
+                    </div>
+                  </form>
+
                 <form class="form form_subscribe" method="post" id="feedback-one" enctype="multipart/form-data">
-                  <div class="form__title">Оформите обратный звонок и наши менеджеры перезвонят вам ближайшее время</div>
+                  <div class="form__title">Или оставьте свой номер и наш меннеджер перезвонит вам</div>
                   <div class="form__form">
                     <input type="hidden" name="nameFF" id="nameFF" x-autocompletetype="name"
                       placeholder="Введите ваше имя">
@@ -236,19 +254,12 @@
                     <button type="submit" class="btn">Отправить</button>
                   </div>
                 </form>
-                <form class="form form_feedback" method="post" id="feedback-two" enctype="multipart/form-data">
-                  <div class="form__title">Написать нам </div>
-                  <div class="form__form">
-                    <input type="text" name="nameFF" id="nameFF" x-autocompletetype="name" placeholder="Введите ваше имя">
-                    <input type="email" name="contactFF" id="contactFF" required x-autocompletetype="email"
-                      placeholder="Введите вашу эл.почту">
-                    <textarea type="text" placeholder="Введите ваше сообщение" name="messageFF" id="messageFF"></textarea>
-                    <button type="submit" class="btn">Отправить</button>
-                  </div>
-                </form>
+
+                
               </div>
             </div>
-            <footer>
+            <p style="padding-left: 35px">Все права защищены 2019</p>
+            <!-- <footer>
               <div class="footer-top">
                 <div class="copir"> © «Московская чулочная фабрика», 2018</div>
                 <div class="footer-text">Изготовление оригинальной чулочно-носочной продукции</div>
@@ -258,7 +269,7 @@
                     href="inner.html">Наши клиенты</a><a href="sample.html">Образцы изделий</a><a
                     href="tsize.html">Таблица размеров</a></div>
               </div>
-            </footer>
+            </footer> -->
           </div>
         </div>
       </section>
