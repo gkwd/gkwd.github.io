@@ -996,9 +996,9 @@ footer {
   /* .container {
     width: 970px;
   } */
-  .header_right{
+  /* .header_right{
     width: 45%;
-  }
+  } */
 }
 
 /* Tablet */
@@ -1110,6 +1110,10 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+  }
+  .slide-img {
+    width: 45%;
+    height: 45%;
   }
   
   
