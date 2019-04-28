@@ -9,10 +9,20 @@ $('.slider_block').slick({
     useTransform: true,
     cssEase: 'linear',
     slidesToShow: 1,
-    draggable: false,
-    // responsive: {
-    //     breakpoints: ,{
-
-    //     }
-    // }
+    draggable: true,
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            vertical: false,
+          }
+        }
+      ]
 });
+
+
+$('.open_menu').on('click', function(){
+    $(this).toggleClass('active');
+    $('.nav_list').toggleClass('visible');
+})
