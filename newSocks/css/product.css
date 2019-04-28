@@ -100,6 +100,41 @@ header {
   border-bottom: 2px solid #000;
   color: #000;
 }
+.list_item.tooltib_block{
+  position: relative;
+}
+.list_item.tooltib_block:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip{
+position: absolute;
+top: 125%;
+left: 0;
+width: 220px;
+padding: 15px;
+background-color: rgba(255, 255, 255, 0.781);
+border-radius: 20px;
+
+visibility: hidden;
+opacity: 0;
+transition: 0.5s all;
+}
+.tip_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.tip_item{
+  display: flex;
+  font-size: 14px;
+  color: #000;
+}
+.tip_item i{
+  margin-right: 25px;
+}
 
 
 .tab_btns{
@@ -309,6 +344,41 @@ footer img{
   }
   .open_menu{
     display: flex;
+  }
+  .list_item.tooltib_block{
+    position: relative;
+  }
+  .list_item.tooltib_block:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip{
+  position: relative;
+  top: 5%;
+  left: 0;
+  width: 220px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.781);
+  border-radius: 20px;
+  
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s all;
+  }
+  .tip_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  .tip_item{
+    display: flex;
+    font-size: 14px;
+    color: #000;
+  }
+  .tip_item i{
+    margin-right: 25px;
   }
 }
 @media (max-width: 768px) {
