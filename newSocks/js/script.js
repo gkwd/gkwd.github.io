@@ -15,6 +15,8 @@ $('.slider_block').slick({
           breakpoint: 768,
           settings: {
             arrows: false,
+            prevArrow: '',
+            nextArrow: '',
             // vertical: false,
             draggable:false,
           }
