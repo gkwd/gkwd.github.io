@@ -1,3 +1,8 @@
+$('.open_menu').on('click', function(){
+  $(this).toggleClass('active');
+  $('.nav_list').toggleClass('visible');
+})
+
 $('.slider_block').slick({
     vertical: true,
     autoplay: false,
@@ -24,8 +29,25 @@ $('.slider_block').slick({
       ]
 });
 
+function openCity(event, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-$('.open_menu').on('click', function(){
-    $(this).toggleClass('active');
-    $('.nav_list').toggleClass('visible');
-})
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tab_content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tab_links");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active_border", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "flex";
+  event.currentTarget.className += " active_border";
+}
+
+
