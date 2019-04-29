@@ -390,34 +390,6 @@ footer img{
     visibility: visible;
     opacity: 1;
   }
-  .tooltip{
-  position: relative;
-  top: 5%;
-  left: 0;
-  width: 220px;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.781);
-  border-radius: 20px;
-  
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s all;
-  }
-  .tip_list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  .tip_item{
-    display: flex;
-    font-size: 14px;
-    color: #000;
-  }
-  .tip_item i{
-    margin-right: 25px;
-  }
 }
 @media (max-width: 768px) {
   .list_item{
