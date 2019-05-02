@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        section {
+            background-color: #fff;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 683px;
+
+            color: #fff;
+            font-size: 20vw;
+            text-align: right;
+            mix-blend-mode: difference;
+            font-weight: 800;
+
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            mix-blend-mode: difference;
+            z-index: 2;
+        }
+
+        .loader {
+            position: absolute;
+            top: 0;
+            /* left: -100%; */
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="loader" id="load"></div>
+        <div class="count"></div>
+    </section>
+
+
+    <script>
+        var loaderLeft =document.getElementById('load');
+        
+        var counter = 0;
+        var times = setInterval(function () {
+            if (counter < 101) {
+                var pc = -100;
+                $('.count').text(counter + '%');
+                // $(".loader").css( 'left', 'calc(' + pc + '% + ' + counter + '%)').animate().delay(500)
+
+                $(".loader").css('width', '0%').animate({ width: counter + '%'}, {duration: 80})
+
+                // $('.loader').css('width', counter + '%').delay(300);
+                // loaderLeft.style.left = 'calc(' + pc + '% + ' + counter + '%)'; 
+                counter++;
+                
+                
+            } else {
+                clearInterval(times);
+            }
+        }, 80);
+
+
+    </script>
+</body>
+
+</html>
