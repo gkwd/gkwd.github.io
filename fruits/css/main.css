@@ -1,0 +1,233 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+
+
+/* ========
+    ALL: IE Fixes
+   =============== */
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+a{
+    text-decoration: none;
+    color: inherit
+}
+body {
+    width: 100%;
+    height: auto;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navigation{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.nav_bar{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav_list{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav_list_item{
+
+}
+
+.header_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 30%;
+    height: auto;
+}
+.desc h1{
+    font-size: 56px;
+}
+
+.download_btn {
+    background-color:#2ecc71;
+    border: 1px solid #2ecc71;
+	border-radius:42px;
+
+	cursor:pointer;
+	color:#fff;
+
+	font-size:16px;
+    padding:17px 58px;
+    transition: all ease 0.5s;
+}
+.download_btn:hover {
+    color: #2ecc71;
+	background-color:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+
+
+    /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+
+
+    /* ============
+    WIDE: Menu
+   ============ */
+
+
+
+    /* ============
+    WIDE: Main
+   ============ */
+
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+    /* ===============
+    Maximal Width
+   =============== */
+
+
+}
+
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {}
