@@ -119,6 +119,37 @@ header{
 }
 .nav_list_item{
 
+    transition: all 0.5s;
+}
+
+.nav_list_item a{
+    font-weight: 700;
+
+    padding: 7px;
+
+    transition: all 0.5s;
+}
+.nav_list_item:hover a{
+    color: #2ecc71;
+}
+.nav_list_item.lang .selectpicker{
+    outline: none;
+    border-radius: 3px;
+    padding-right: 30px;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 90% 50%;
+}
+.selectpicker option{
+    background-color: #fff;
+    border: 1px solid black
 }
 
 .header_desc{
@@ -138,33 +169,99 @@ header{
     justify-content: center;
     text-align: center;
 
-    width: 30%;
+    width: 50%;
     height: auto;
+    margin: 110px 0 0 0;
 }
 .desc h1{
-    font-size: 56px;
+    font-size: 66px;
+}
+.desc p{
+    width: 60%;
+    line-height: 25px;
 }
 
 .download_btn {
     background-color:#2ecc71;
     border: 1px solid #2ecc71;
-	border-radius:42px;
+    border-radius:42px;
+    margin: 30px 0 110px 0;
 
 	cursor:pointer;
 	color:#fff;
 
 	font-size:16px;
-    padding:17px 58px;
+    padding:17px 36px;
     transition: all ease 0.5s;
 }
 .download_btn:hover {
     color: #2ecc71;
 	background-color:transparent;
 }
+.download_btn span{
+    margin-right: 20px;
+    font-weight: 300;
+}
 
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+main h1{
+    font-size: 58px;
 
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.product{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.product_card{
+    width: 31%;
+    height: 305px;
 
+    border: 1px solid rgba(138, 138, 138, 0.404)
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+}
+.about_desc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    padding: 0 25px;
+    margin: 0;
+}
+.about_slider{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    padding: 0 25px;
+    margin: 0;
+}
 
 
 
