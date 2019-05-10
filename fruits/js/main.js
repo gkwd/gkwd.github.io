@@ -1,16 +1,18 @@
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
-    fade: true,
+    arrows: true,
+    fade: false,
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    infinite: true,
+    arrows: true
   });
   

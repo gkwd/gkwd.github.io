@@ -159,6 +159,7 @@ header {
     background-repeat: no-repeat;
     background-size: 16px;
     background-position: 90% 50%;
+    background-color:transparent;
 }
 
 .selectpicker option {
@@ -309,12 +310,11 @@ main h1 {
 
 .about_slider {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    max-width: 50%;
-    width: 570px;
+    width: 50%;
     padding: 0 25px;
     margin: 0;
 }
@@ -326,6 +326,10 @@ main h1 {
     align-items: center;
     justify-content: center;
 }
+.slider_img img{
+    width: 100%;
+    height: auto;
+}
 .small_slider{
     width: 100%;
     height: auto;
@@ -333,6 +337,17 @@ main h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.sm_img{
+    width: 25%;
+    height: auto;
+
+}
+.sm_img img{
+    width: 100%;
+    height: auto;
+    outline: none;
+    /* border: 3px solid #fff; */
 }
 
 .why_block{
