@@ -80,6 +80,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 .navigation {
@@ -461,9 +463,131 @@ footer{
 
 
 
+button.slick-next.slick-arrow {
+    position: absolute;
+    z-index: 1001;
+    right: 15px;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  
+  button.slick-prev.slick-arrow {
+    position: absolute;
+    z-index: 1001;
+    left: 15px;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
 
 
 
+  .open_menu{
+    padding: 3px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+  
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 25px;
+  
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .open_menu span{
+    position: relative;
+  
+    display: block;
+    width: 22px;
+    height: 5px;
+    color: #fff;
+    background-color: #6CC64D;
+    border-radius: 20px;
+    transition: 0.5s all;
+  }
+  .open_menu span::after,
+  .open_menu span::before{
+    position: absolute;
+    right: 0;
+  
+    content: '';
+    width: 22px;
+    height: 5px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #6CC64D;
+    transition: 0.5s all;
+  }
+  .open_menu span::after{
+    top: 8px
+  }
+  .open_menu span::before{
+    top: -8px;
+  }
+  
+  .open_menu.active span{
+    border: 1px solid transparent;
+    background-color: transparent;
+    transition: 0.5s all;
+  }
+  .open_menu.active span::after,
+  .open_menu.active span::before{
+    width: 25px;
+  }
+  .open_menu.active span::after{
+    transform: rotate(45deg) translate(-4px, -6px);
+    transition: 0.5s all;
+  }
+  .open_menu.active span::before{
+    transform: rotate(-45deg) translate(-5px, 7px);
+    transition: 0.5s all;
+  }
+  
+
+
+
+
+
+#parallax{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.front{
+    background-image: url(../img/Frame\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.back{
+    background-image: url(../img/Frame.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+}
 
 
 
@@ -472,14 +596,107 @@ footer{
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-
+@media only screen and (max-width: 991px) {
+    .front,
+    .back{
+        display: none;
+    }
+    #parallax{
+        background-image: url(../img/Frame.png);
+    }
     /* ====================
     INTERMEDIATE: Menu
    ==================== */
 
+   .hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  .visible{
+    transition: 0.5s all;
+    visibility: visible;
+    opacity: 1;
+    right: 0 !important;
+  }
+  .open_menu{
+    display: flex;
+  }
 
+  .nav_list{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: 100vh;
+    padding-top: 100px;
+    padding: 32px;
+    background-color: rgba(107, 198, 77, 0.308);
 
+    position: fixed;
+    right: -500px;
+    top: 0;
+    transition: 0.5s all;
+  }
+.nav_list_item{
+    margin-bottom: 25px;
+
+    color: #fff;
+}
+
+main h1{
+    width: auto;
+    font-size: 32px;
+}
+.product_card .card_desc h3{
+    font-size: 24px;
+
+}
+.product_card{
+  height: 277px;
+}
+.about{
+  flex-direction: column;
+}
+.about_desc{
+  width: 80%;
+}
+.about_slider{
+  width: 80%;
+}
+.desc h1{
+    font-size: 45px;
+}
+.desc p{
+    width: auto;
+}
+.why_block{
+  flex-direction: column;
+
+}
+.why_block .char{
+  width: 75%;
+}
+.to_action{
+  flex-direction: column;
+}
+.to_action h2{
+  text-align: center;
+}
+.footer{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_link {
+  width: auto;
+}
+.f_product{
+  width: auto;
+}
+.footer iframe{
+  display: none;
+}
     /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
@@ -487,13 +704,20 @@ footer{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     /* ====================
     WIDE: CSS3 Effects
    ==================== */
-
-
+   .product{
+       flex-direction: column;
+   }
+   .product_card {
+    height: auto;
+    width: auto;
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+   }
 
     /* ============
     WIDE: Menu
