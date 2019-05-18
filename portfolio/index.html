@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>Добро пожаловать! Это мое порфолио</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Pacifico&subset=cyrillic');
+        @import url('https://fonts.googleapis.com/css?family=Andika&subset=cyrillic');
+
+
+        :root{
+            --bg: #ecf0f1 ;
+            /* --color-two: #273c75;
+            --color-three: #c23616 ; */
+            --color-two: #000;
+            --color-three: #b2bec3;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            /* font-family: 'Oswald', sans-serif;
+            font-family: 'Pacifico', cursive; */
+        }
+
+        main.one_page {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+
+            background-color: var(--color-two);
+
+
+        }
+
+        /* .bgImage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            background-image: url(https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=866&q=80);
+            background-color: var(--color-two);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(5px)
+        } */
+
+        .description {
+            width: 20%;
+            max-width: 40%;
+            height: 100%;
+
+            /* position: relative;
+            top: 0;
+            bottom: 0; */
+            /* background-color: var(--bg); */
+            padding: 0 25px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .description h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 48px;
+            color: transparent;
+            -webkit-text-stroke-width: 0.001em;
+            -webkit-text-stroke-color: #fff;
+        }
+
+        .description p {
+            font-family: 'Andika', sans-serif;
+            color: #fff;
+            height: 100%;
+        }
+
+        .social {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .social ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 15px 0;
+            list-style: none;
+        }
+
+        .social ul .social_links a {
+            font-size: 21px;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+
+        .sites {
+            /* background-color: rgba(30, 55, 153, 0.7); */
+            padding: 0 25px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            width: 55%;
+            height: 100%;
+        }
+
+        .sites h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 48px;
+            color: transparent;
+            -webkit-text-stroke-width: 0.001em;
+            -webkit-text-stroke-color: #fff;
+        }
+
+        .projects_link {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+
+            width: 100%;
+            height: auto;
+        }
+
+        .circle_wrapper {
+            width: 20%;
+            height: auto;
+
+            margin: 15px 0;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+
+            margin: 0 auto;
+            color: #fff;
+            /* transform: rotate(-360deg);
+            transition: 0.5s all; */
+            
+        }
+
+        .circle a,
+        .tiny_projects .circle a {
+            font-size: 42px;
+            transition: 0.5s all;
+            animation: b 0.7s forwards;
+            /* transform: rotate(-360deg);
+            transition: 0.5s all; */
+        }
+
+        .tiny_projects {
+            /* background-color: rgba(6, 81, 221, 0.7); */
+            padding: 0 25px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 25%;
+            height: 100%;
+        }
+
+        .tiny_projects h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 48px;
+            color: transparent;
+            -webkit-text-stroke-width: 0.001em;
+            -webkit-text-stroke-color: #fff;
+        }
+
+        .tiny_projects .projects_link {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .tiny_projects .circle_wrapper {
+            width: 48%;
+            height: auto;
+        }
+
+        .tiny_projects .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin: 0 auto;
+        }
+
+        .circle:hover,
+        .tiny_projects .circle:hover {
+            box-shadow: 0 0 20px var(--bg), inset 0 0 20px var(--bg);
+            transition: all 0.5s;
+        }
+
+        .circle:hover a,
+        .tiny_projects .circle:hover a {
+            text-shadow: 0 0 20px var(--color-three);
+            position: relative;
+            transition: all 0.5s;
+            
+            
+            animation: a 0.7s forwards;
+            /* animation-direction: reverse; */
+            /* transform: scale(1.5) rotate(360deg); */
+        }
+
+        h1 {
+            text-shadow: 0 0 20px var(--color-three);
+            position: relative;
+            letter-spacing: 8px;
+        }
+
+        h1:hover {
+            animation: drop linear 0.7s forwards;
+        }
+        h1:hover h1::after {
+            animation: drop linear 0.7s forwards;
+        }
+        h1:hover h1::before {
+            animation: drop linear 0.7s forwards;
+        }
+
+
+        h1::after {
+            content: attr(data-value);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            color: var(--color-three);
+            filter: blur(5px);
+        }
+
+        h1::before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-three);
+            opacity: 0.5;
+            filter: blur(40px);
+        }
+
+        @keyframes drop {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px var(--color-three);
+                
+            }
+
+            25% {
+                text-shadow: none;
+            }
+
+            30% {
+                text-shadow: 0 0 20px var(--color-three);
+            }
+
+            50% {
+                text-shadow: none;
+            }
+
+            75% {
+                text-shadow: 0 0 20px var(--color-three);
+            }
+
+            90% {
+                text-shadow: none;
+            }
+        }
+        @keyframes a {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+  
+}
+@keyframes b{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1);
+  }
+  }
+    </style>
+</head>
+
+<body>
+    <main class="one_page">
+        <div class="bgImage"></div>
+        <div class="description">
+            <h1 class="wel" data-value="Меня зовут...">Меня зовут...</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis earum quibusdam architecto pariatur
+                dignissimos commodi veniam enim iste saepe recusandae adipisci ex maxime assumenda dolor illo, sit
+                repellat mollitia cumque.</p>
+            <div class="social">
+                <ul>
+                    <li class="social_links"><a href=""><i class="fab fa-vk fa-fw"></i></a></li>
+                    <li class="social_links"><a href=""><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="social_links"><a href=""><i class="fab fa-facebook-square fa-fw"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tiny_projects">
+            <h1 class="pro" data-value="Приложения">Приложения</h1>
+            <div class="projects_link">
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">1</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">2</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">3</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">4</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">5</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sites">
+            <h1 class="myPro" data-value="Сайты">Сайты</h1>
+            <div class="projects_link">
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">1</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">2</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">3</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">4</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">5</a>
+                    </div>
+                </div>
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <a href="" class="link_to_site">6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
