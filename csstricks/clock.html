@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(38, 42, 97);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+        }
+
+        .clock_box {
+            border: 3px solid #ccc;
+            border-radius: 50%;
+            width: 350px;
+            height: 350px;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            background-image: url(clock.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+        }
+
+        .clock_box #sec {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            /* border-right: 2px solid #fff; */
+
+            width: 2px;
+            height: 100%;
+            background-color: #000;
+            transition: all 0.8s linear;
+            transform-origin: 50% 100%;
+
+        }
+
+        .clock_box #min {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 48px;
+            /* border-right: 2px solid #fff; */
+
+            width: 2px;
+            height: 130px;
+            background-color: #000;
+            transition: all 1s linear;
+            transform-origin: 50% 100%;
+
+        }
+
+        .clock_box #hour {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 78px;
+            /* border-right: 2px solid #fff; */
+
+            width: 2px;
+            height: 100px;
+            background-color: #000;
+            transition: all 1s linear;
+            transform-origin: 50% 100%;
+
+        }
+
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            height: 15px;
+            background-color: rgb(38, 42, 97);
+        }
+
+        .btn {
+            background-color: #fff;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            display: inline-block;
+            cursor: pointer;
+            color: #000;
+            font-family: sans-serif;
+            font-size: 1.3em;
+            padding: 10px 35px;
+            align-self: flex-end;
+            justify-self: center;
+            margin-bottom: 50px;
+        }
+
+        .result {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 150px;
+            height: 35px;
+            background-color: transparent;
+        }
+
+        .result span {
+            width: 30%;
+            height: 100%;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clock_box" id="box">
+            <span id="sec"></span>
+            <span id="min"></span>
+            <span id="hour"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="btn" id="timer">Timer</button>
+        <button class="btn" id="clock">Clock</button>
+        <!-- <button class="btn" id="start">Start</button> -->
+        <button class="btn" id="stop">Stop</button>
+    </div>
+
+    <div class="result" id="res">
+        <span id="r_hour"></span>
+        <span id="r_min"></span>
+        <span id="r_sec"></span>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', Clock);
+
+        
+        let r_sec = document.getElementById('r_sec');
+        let r_min = document.getElementById('r_min');
+        let r_hour = document.getElementById('r_hour');
+
+        let timer = document.getElementById('timer');
+        let clock = document.getElementById('clock');
+
+        let [sec, min, hour, start, stop, res] = 
+        [document.getElementById('sec'),
+         document.getElementById('min'), 
+         document.getElementById('hour'), 
+         document.getElementById('start'), 
+         document.getElementById('stop'),
+         document.getElementById('res')];
+
+
+        let n = 0;
+        let min_ar = 0;
+        let h = 0;
+
+
+        function Timer() {
+        
+            n = n + 6;
+            if (n == 360) {
+                n = 0
+
+                min_ar = min_ar + 6;
+                if (min_ar == 360) {
+                    min_ar = 0
+                    h = h + 30;
+                }
+            }
+            sec.style.transform = `rotate(${n}deg)`;
+            min.style.transform = `rotate(${min_ar}deg)`;
+            hour.style.transform = `rotate(${h}deg)`;
+            setTimeout(Timer, 1000);
+            clearTimeout(Timer, 6000);
+            return true;
+        }
+        timer.addEventListener('click', Timer);
+
+
+        let n2 = new Date();
+        let min_ar2 = new Date();
+        let h2 = new Date();
+
+        function Clock() {
+            setTimeout(Timer, 1000);
+
+            n = n2.getSeconds() * 6;
+            min_ar = min_ar2.getMinutes() * 6;
+            h = h2.getHours() * 30;
+
+            sec.style.transform = `rotate(${n}deg)`;
+            min.style.transform = `rotate(${min_ar}deg)`;
+            hour.style.transform = `rotate(${h}deg)`;
+        }
+
+        clock.addEventListener('click', Clock);
+
+        stop.addEventListener('click', function () {
+            r_sec.innerHTML = n / 6;
+            r_min.innerHTML = min_ar / 6;
+            r_hour.innerHTML = h / 30;
+            Timer = false;
+        })
+        
+    </script>
+</body>
+
+</html>
