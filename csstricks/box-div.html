@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(158, 92, 92);
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 400px;
+            background-color: transparent;
+            transform-style: preserve-3d;
+            transform: perspective(1750px) rotateY(15deg);
+            transition: 3s all;
+
+        }
+
+        .box:hover {
+            transform: perspective(1750px) rotateY(360deg);
+        }
+
+        .box .side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* z-index: 1000; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .box .side#one {
+            transform: translateZ(150px);
+            /* background-color: #fff; */
+        }
+
+        .box .side#two {
+            transform: translateZ(-150px);
+            /* background-color: rgb(104, 0, 0); */
+        }
+
+        .box .side#three {
+            transform: translateX(150px) rotateY(-90deg);
+            /* background-color: rgb(107, 107, 107); */
+        }
+
+        .box .side#four {
+            transform: translateX(-150px) rotateY(90deg);
+            /* background-color: rgb(0, 117, 45); */
+        }
+        .img_box{
+            width: 100%;
+            height: 170px;
+            /* object-fit: contain; */
+        }
+        .img_box img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .info{
+            padding: 0;
+            margin: 0 auto;
+            font-family: sans-serif;
+            width: 85%;
+        }
+        #next{
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <div class="side" id="one">
+            <div class="img_box">
+                <img src="https://images.unsplash.com/photo-1558980664-10e7170b5df9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="">
+            </div>
+            <div class="info">
+                <h2>Loremipsum dolem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia inventore eum ipsam quae
+                    ducimus reiciendis, temporibus, dolore unde distinctio atque suscipit earum perferendis,</p>
+            </div>
+        </div>
+        <div class="side" id="two">
+            <div class="img_box">
+                <img src="https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="">
+            </div>
+            <div class="info">
+                <h2>Loremipsum dolem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia inventore eum ipsam quae
+                    ducimus reiciendis, temporibus, dolore unde distinctio atque suscipit earum perferendis,</p>
+            </div>
+        </div>
+        <div class="side" id="three">
+            <div class="img_box">
+                <img src="https://images.unsplash.com/photo-1559483889-fde0f92d9590?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
+            </div>
+            <div class="info">
+                <h2>Loremipsum dolem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia inventore eum ipsam quae
+                    ducimus reiciendis, temporibus, dolore unde distinctio atque suscipit earum perferendis,</p>
+            </div>
+        </div>
+        <div class="side" id="four">
+            <div class="img_box">
+                <img src="https://images.unsplash.com/photo-1559490882-7dcb44c490b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80" alt="">
+            </div>
+            <div class="info">
+                <h2>Loremipsum dolem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia inventore eum ipsam quae
+                    ducimus reiciendis, temporibus, dolore unde distinctio atque suscipit earum perferendis,</p>
+            </div>
+        </div>
+    </div>
+    <button id="next">Next</button>
+    <script>
+        let btn = document.getElementById('next');
+        let i = 0;
+        btn.addEventListener('click', function(){
+            
+            let box = document.getElementById('box');
+            box.style.transform = `rotateY(${i = i + 90}deg)`
+        })
+    </script>
+</body>
+
+</html>

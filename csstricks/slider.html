@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+                linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+            background-color: #708090;
+            background-size: 64px 128px;
+            width: 100%;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider_box{
+            width: 629px;
+            height: 416px;
+            box-shadow: 0px 0px 118px -16px rgba(0,0,0,0.75);
+            position: relative;
+        }
+        .slider_img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 1s ease-in;
+            transform: scaleX(0);
+            transform-origin: 0 0;
+            /* object-fit: cover; */
+        }
+        .slider_img img{
+            width: 100%;
+            height: 100%;
+                  
+        }
+        .btn{
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .btn.next_btn{
+            top: 0;
+            right: 0;
+        }
+        .btn.prev_btn{
+            top: 0;
+            left: 0;
+        }
+        .btn button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider_box">
+            <div class="next_btn btn">
+                    <button id="next" class="next"> > </button>
+            </div>
+            <div id="prev" class="prev_btn btn">
+                    <button class="prev"> < </button>
+            </div>
+            
+            
+            <div class="slider_img">
+                <img src="https://images.unsplash.com/photo-1483086451546-5a971a934123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80"
+                    alt="">
+            </div>
+            <div class="slider_img">
+                <img src="https://images.unsplash.com/photo-1494363608357-c7fa659e7325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+                    alt="">
+            </div>
+            <div class="slider_img">
+                <img src="https://images.unsplash.com/photo-1496086158628-3068d5b918b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        // Обьявляем переменные
+        let next = document.getElementById('next')
+        let prev = document.getElementById('prev')
+        let x;
+        let scaleNum = 0;
+        let img = document.getElementsByClassName('slider_img');
+        let i = 0;
+        let arr = []
+
+        // Создаем массив из див-элементов
+        while( i < img.length){ 
+            arr.push(img[i])
+            i++
+        }
+
+        // Добавляем обработчик событий на кнопку next
+
+        let someNum = 0; 
+        
+        // 
+        function changePhoto(){
+                if(someNum == 3){
+                    someNum = 0;
+                    arr[1].style.removeProperty('transform');
+                    arr[2].style.removeProperty('transform');
+                }
+                else{
+                    console.log(someNum);
+                    arr[someNum].style.transform = `scaleX(${scaleNum + 1})`
+                    someNum++;
+                }
+                
+        }
+        // setInterval(changePhoto, 1000)
+
+
+        // Добавляем обработчик событий на кнопку next
+        next.addEventListener('click', function(){
+            if(someNum == 3){
+                    someNum = 0;
+                    // arr[1].style.removeProperty('transform');
+                    // arr[2].style.removeProperty('transform');
+                    arr[1].style.transformOrigin = '100% 0'
+                    arr[1].style.transform = `scaleX(${scaleNum})`
+                    arr[2].style.transformOrigin = '100% 0'
+                    arr[2].style.transform = `scaleX(${scaleNum})`
+                }
+                else{
+                    console.log(someNum);
+                    arr[someNum].style.transformOrigin = '0 0'
+                    arr[someNum].style.transform = `scaleX(${scaleNum + 1})`
+                    
+                    someNum++;
+                    return someNum = someNum;
+                }
+        })
+        
+        // Добавляем обработчик событий на кнопку prev
+        prev.addEventListener('click', function(){
+            if(someNum == 2){
+                arr[1].style.transform = `scaleX(${scaleNum + 1})`
+                arr[someNum].style.transform = `scaleX(${scaleNum})`
+            }
+            else if(someNum == 1){
+                arr[0].style.transform = `scaleX(${scaleNum + 1})`
+                arr[someNum].style.transform = `scaleX(${scaleNum})`
+            }
+            else if(someNum == 0){
+                arr[2].style.transform = `scaleX(${scaleNum + 1})`
+                arr[someNum].style.transform = `scaleX(${scaleNum})`
+            }
+            else if(someNum > 2){
+                someNum = 0;
+            } 
+            else if(someNum < 0){
+                someNum = 3;
+            }
+            someNum--;
+            console.log(someNum)
+        })
+    </script>
+</body>
+
+</html>

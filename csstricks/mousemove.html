@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh; 
+            background-color: rgb(64, 124, 24);
+            position: relative;
+            /* cursor: none; */
+            background-color: rgb(77, 123, 223);
+            background-image: url(https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            overflow: hidden;
+        }
+        #mouse{
+            display: flex;
+            transform: translate(-50%, -50%);
+            transition: width 1s linear,
+                        height 1s linear,
+                        opacity 1s linear;
+                        /* box-shadow 3s ease-in; */
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            position: relative;
+            /* box-shadow: 35px 0px 0px -1px rgba(0,0,0,0.25); */
+        }
+        #mouse.bigger{
+            width: 350px;
+            height: 350px;
+            opacity: 0;
+            box-shadow: 0px 0px 35px -2px rgba(0,0,0,0.55);
+             /* inset 0px 0px 22px -2px rgba(0,0,0,0.75); */
+        }
+        #mouse.bigger::after{
+            width: 95%;
+            height: 95%;
+            box-shadow: inset 0px 0px 52px -2px rgba(0,0,0,0.55);
+            /* opacity: 0; */
+        }
+        #mouse::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            width: 1%;
+            height: 1%;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body id="bd">
+    <div id="mouse"></div>
+    <script>
+        let body = document.getElementById('bd');
+        let mouse = document.getElementById('mouse');
+        bd.addEventListener('mousemove', function(e){
+            mouse.style.top = `${e.pageY}px`;
+            mouse.style.left = `${e.pageX}px`;
+            // let x = 0;
+            // let displayX = document.style.width;
+            
+            
+            // mouse.style.boxShadow = `${x + 30}px 0px 0px -1px rgba(0,0,0,0.25), ${x + 45}px 0px 0px -1px rgba(0,0,0,0.25), ${x + 50}px 0px 0px -1px rgba(10,0,0,0.25)`;
+            // if(mouse.style.left < displayX/2){
+            //     x = x * -1;
+            // }
+            // else if(mouse.style.left > displayX/2){
+            //     x = x * 1;
+            // }
+        })
+
+            mouse.addEventListener('click', function(){
+            mouse.classList.add('bigger');
+            
+            setTimeout(rem, 2000)
+            
+        })
+        function rem(){
+            mouse.classList.remove('bigger');
+        }
+            
+
+        
+    </script>
+    <!-- box-shadow: 35px 0px 0px -1px rgba(0,0,0,0.25); -->
+
+</body>
+</html>
