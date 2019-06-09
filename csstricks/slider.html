@@ -102,6 +102,7 @@
         </div>
     </div>
     <script>
+        
         // Обьявляем переменные
         let next = document.getElementById('next')
         let prev = document.getElementById('prev')
@@ -181,6 +182,10 @@
             }
             someNum--;
             console.log(someNum)
+        })
+        document.addEventListener('DOMContentLoaded', function(){
+            arr[someNum].style.transform = `scaleX(${scaleNum + 1})`;
+            return someNum = 1;
         })
     </script>
 </body>
