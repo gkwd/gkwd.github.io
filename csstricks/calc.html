@@ -24,7 +24,7 @@
         .calc_box {
             background-color: #596275;
             width: 300px;
-            height: 400px;
+            height: 450px;
             border-radius: 25px;
 
             display: flex;
@@ -36,12 +36,17 @@
         .calc_box .text_area {
             width: 80%;
             height: 42px;
-            border: 1px solid #fff;
-            background-color: #786fa6;
-            text-align: right;
-
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid #fff; */
+            /* background-color: #786fa6; */
+            /* text-align: right; */
+            margin-bottom: 25px;
+            
         }
-
         .text_area #area {
             width: 100%;
             height: 100%;
@@ -50,40 +55,131 @@
             border: none;
             outline: none;
             font-family: sans-serif;
-            color: #ccc;
+            color: rgb(80, 80, 80);
+            padding: 3px;
+            box-shadow: inset 3px 3px 11px 0px rgba(0,0,0,0.6);
         }
 
         .num_box {
-            width: 80%;
-            height: auto;
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
+            width: 90%;
+            height: 300px;
             margin-top: 10px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px 10px;
+            grid-template-areas: "first five"
+                                 "second five"
+                                 "third five"
+                                 "four five";
+        }
+        .first {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "one two th""one two th";
+            grid-area: first;
+        }
+        .first button:nth-child(1){
+            grid-area: one;
+        }
+        .first button:nth-child(2){
+            grid-area: two;
+        }
+        .first button:nth-child(3){
+            grid-area: th;
         }
 
-        .line {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+        .second {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "one two th""one two th";
+            grid-area: second;
+        }
+        .second button:nth-child(1){
+            grid-area: one;
+        }
+        .second button:nth-child(2){
+            grid-area: two;
+        }
+        .second button:nth-child(3){
+            grid-area: th;
         }
 
-        .num_box button {
-            background-color: #fff;
+        .three {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "one two th""one two th";
+            grid-area: third;
+        }
+        .three button:nth-child(1){
+            grid-area: one;
+        }
+        .three button:nth-child(2){
+            grid-area: two;
+        }
+        .three button:nth-child(3){
+            grid-area: th;
+        }
+
+        .four {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "one two th""one two th";
+            grid-area: four;
+        }
+        .four button:nth-child(1){
+            grid-area: one;
+        }
+        .four button:nth-child(2){
+            grid-area: two;
+        }
+        .four button:nth-child(3){
+            grid-area: th;
+        }
+        .five {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "one" "two" "th" "four";
+            grid-area: five;
+        }
+        .five button:nth-child(1){
+            grid-area: one;
+        }
+        .five button:nth-child(2){
+            grid-area: two;
+        }
+        .five button:nth-child(3){
+            grid-area: th;
+        }
+        .five button:nth-child(4){
+            grid-area: four;
+        }
+        .line{
+            grid-gap: 5px 5px;
+        }
+
+        button{
             border: none;
             outline: none;
-            font-weight: bold;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 3px 6px 0px 0px rgba(0,0,0,0.6);
+            transition: 0.25s all;
+            font-size: 36px;
+        }
 
-            text-align: center;
-            width: 30%;
-            height: 52px;
-            margin-bottom: 10px;
-            cursor: pointer;
-
+        button:active{
+            box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.6);
+            transform: translate(0, 3px);
+        }
+        #eval{
+            background-color: rgb(255, 109, 109);
+            color: #fff;
         }
     </style>
 </head>
@@ -114,13 +210,15 @@
                 </div>
                 <div class="line four">
                     <button class="btn" type="button" name="nums" value="0">0</button>
-                    <button class="btn" type="button" name="nums" value="+">+</button>
-                    <button class="btn" type="button" name="nums" value="-">-</button>
+                    <button id="dot" class="dot" type="button" name="dot" value=".">.</button>
+                    <button id="eval" class="" type="button" name="eval" value="=">=</button>
                 </div>
                 <div class="line five">
-                    <button class="btn" type="button" name="nums" value="/">/</button>
-                    <button class="btn" type="button" name="nums" value="*">*</button>
-                    <button id="eval" class="" type="button" name="eval" value="=">=</button>
+                    <button id="plus" class="btn" type="button" name="nums" value="+">+</button>
+                    <button id="min" class="btn" type="button" name="nums" value="-">-</button>
+                    <button id="mult" class="btn" type="button" name="nums" value="*">*</button>
+                    <button id="divor" class="btn" type="button" name="nums" value="/">/</button>
+                    
                 </div>
             </div>
         </div>
