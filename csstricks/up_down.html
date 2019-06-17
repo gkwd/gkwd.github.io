@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+            background-color: #3d3d3d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrow_box{
+            width: 250px;
+            height: 400px;
+            /* border: 1px solid white; */
+            /* display: flex;
+            
+            justify-content: center;
+            align-items: center; */
+        }
+        .arrow_box .arrows{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: 40px;
+            margin-bottom: 15px;
+            /* border: 1px solid white; */
+        }
+        .arrow_box .arrows::before{
+            content: '';
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid white; */
+            
+        }
+        .arrow_box .arrows::after{
+            content: '';
+            width: 48%;
+            height: 100%;
+            /* border: 1px solid white; */
+            
+        }
+        .arrow_box .arrows::before,
+        .arrow_box .arrows::after{
+            transition: 0.5s all linear;
+            background-color: #18dcff;
+            
+        }
+        .arrow_box:hover .arrows::before{
+            transform: skewX(-30deg) rotate(-30deg) translate(-9px);
+            animation: change 0.5s infinite;
+        }
+        .arrow_box:hover .arrows::after{
+            transform: skewX(30deg) rotate(30deg) translate(7px);
+            animation: change 0.5s infinite;
+
+        }
+        @keyframes change{
+            from{
+                background-color: #18dcff;
+            }
+            to{
+                background-color: #7efff5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="arrow_box">
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+            <span class="arrows"></span>
+        </div>
+    </div>
+
+    <script>
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Масса
+    <input type="text" id="mass" value="">
+    Высота
+    <input type="text" id="height" value="">
+    Ответ
+    <input type="text" id="asw" value="">
+
+    <button id="btn">Click me</button>
+    <script>
+        let btn = document.getElementById('btn');
+        let mass = document.getElementById('mass');
+        let height = document.getElementById('height');
+        let answer = document.getElementById('asw');
+
+        btn.addEventListener('click', function(){
+            if(mass.value == isNaN){
+            console.log(false)
+        }
+        else{
+            console.log(true)
+        }
+        let m = mass.value;
+        let h = height.value;
+        answer.value = m / (h * h);
+        writeToDisk(answer.value)
+        })
+        function writeToDisk(writeString) {
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var a = fso.CreateTextFile(theFile, true);
+        a.WriteLine(writeString);
+        a.Close();
+        }
+    </script>
+</body>
+</html>
