@@ -197,7 +197,7 @@ main{
   .slider_item{
     width: calc(100% / 3);
     height: 100%;
-  }
+  }                    
   .slider_item img{
     position: relative;
     width: 100%;
