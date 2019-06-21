@@ -1,7 +1,7 @@
 const sliderWrapper = document.querySelector('.slider_list')
 const sliderItems = document.getElementsByClassName('slider_item')
-const slideNow = 1;
-const translateWidth = 0;
+let slideNow = 1;
+let translateWidth = 0;
 const sliderViewport = document.querySelector('.slider_viewport');
 const viewportWidth = parseFloat(getComputedStyle(sliderViewport).width);
 const slideCount = sliderItems.length;
@@ -10,7 +10,7 @@ const desc = document.getElementById('description')
 const descWrapper = document.querySelector('.desc_slide')
 const descViewport = document.getElementById('dV')
 const descViewportHeight = parseFloat(getComputedStyle(descViewport).height)
-const descTranslateHeight = 0;
+let descTranslateHeight = 0;
 
 // let description = document.getElementById('description');
 let btnPrev = document.getElementById('prev');

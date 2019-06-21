@@ -28,7 +28,7 @@ header (navigation) start
 
  */
 
- .burger_menu_box{
+ .mobile_menu_box{
      position: absolute;
      display: none;
  }
