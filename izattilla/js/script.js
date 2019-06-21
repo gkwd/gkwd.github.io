@@ -1,16 +1,16 @@
-let sliderWrapper = document.querySelector('.slider_list')
-let sliderItems = document.getElementsByClassName('slider_item')
-let slideNow = 1;
-let translateWidth = 0;
-let sliderViewport = document.querySelector('.slider_viewport');
-let viewportWidth = parseFloat(getComputedStyle(sliderViewport).width);
-let slideCount = sliderItems.length;
+const sliderWrapper = document.querySelector('.slider_list')
+const sliderItems = document.getElementsByClassName('slider_item')
+const slideNow = 1;
+const translateWidth = 0;
+const sliderViewport = document.querySelector('.slider_viewport');
+const viewportWidth = parseFloat(getComputedStyle(sliderViewport).width);
+const slideCount = sliderItems.length;
 
-let desc = document.getElementById('description')
-let descWrapper = document.querySelector('.desc_slide')
-let descViewport = document.getElementById('dV')
-let descViewportHeight = parseFloat(getComputedStyle(descViewport).height)
-let descTranslateHeight = 0;
+const desc = document.getElementById('description')
+const descWrapper = document.querySelector('.desc_slide')
+const descViewport = document.getElementById('dV')
+const descViewportHeight = parseFloat(getComputedStyle(descViewport).height)
+const descTranslateHeight = 0;
 
 // let description = document.getElementById('description');
 let btnPrev = document.getElementById('prev');
@@ -49,3 +49,42 @@ function prevBtn() {
 btnPrev.addEventListener('click', prevBtn)
 
 btnNext.addEventListener('click', nextBtn)
+
+
+
+const extra = document.getElementById('extra')
+const menu = document.getElementById('menu')
+const nav = document.querySelector('.nav')
+const contact = document.querySelector('.extra_contact');
+let contact_style = getComputedStyle(contact)
+let nav_style = getComputedStyle(nav)
+
+extra.addEventListener('click', function(){
+  const rightOffset = parseFloat(contact_style.right);
+  console.log(contact.right)
+  if(rightOffset == -280){
+    extra.style.right = '280px'
+    contact.style.right = 0;
+    contact.style.zIndex = 151;
+  }
+  else{
+    contact.style.right = '-280px';
+    extra.style.right = '0'
+    contact.style.zIndex = 100;
+  }
+})
+
+menu.addEventListener('click', function(){
+  const rightOffset = parseFloat(nav_style.right);
+  console.log(nav.right)
+  if(rightOffset == -280){
+    menu.style.right = '280px'
+    nav.style.right = 0;
+    nav.style.zIndex = 151;
+  }
+  else{
+    nav.style.right = '-280px';
+    menu.style.right = '0'
+    nav.style.zIndex = 100;
+  }
+})
