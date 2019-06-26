@@ -88,3 +88,25 @@ menu.addEventListener('click', function(){
     nav.style.zIndex = 100;
   }
 })
+
+let circle = document.getElementById('fake_circle');
+let c_style = document.querySelector('.cicle_style');
+let article = document.querySelector('.arcticle');
+circle.addEventListener('click', function(){
+  
+  article.style.opacity = '0';
+  article.style.display = 'none';
+  
+  // circle.style.width = '100%';
+  // circle.style.height = '100%';
+  
+  // c_style.style.width = '100%';
+  // c_style.style.height = '100%';
+  
+  c_style.style.top = '0';
+  c_style.style.left = '0';
+  
+  c_style.style.transform = 'translate(0)';
+  c_style.classList.add('active')
+  c_style.style.clipPath = 'circle(100% at 50% 50%)';
+})
