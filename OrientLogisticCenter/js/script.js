@@ -32,7 +32,7 @@ function prevBtn() {
     slideNow--;
   }
 }
-// btnPrev.addEventListener('click', prevBtn)
+btnPrev.addEventListener('click', prevBtn)
 
-// btnNext.addEventListener('click', nextBtn)
+btnNext.addEventListener('click', nextBtn)
 
