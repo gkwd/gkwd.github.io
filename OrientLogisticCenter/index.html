@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Orient Logistic Center</title>
-    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts/fonts.css">
 
 </head>
 
 <body>
     <header>
+
+        <span id="burger" class="burger"></span>
+
         <div class="header_navigation">
             <div class="logo">
-                <img src="img/OLC RGB.jpg" alt="">
+                <img src="img/image.png" alt="">
             </div>
 
             <div class="navigation">
@@ -37,11 +40,11 @@
                 <div class="nav_wrapper">
                     <nav class="nav_bar">
                         <ul class="nav_list">
-                            <li class="nav_item"><a href="" class="nav_item_link">Главная</a></li>
-                            <li class="nav_item"><a href="" class="nav_item_link">Услуги</a></li>
+                            <li class="nav_item"><a href="/" class="nav_item_link">Главная</a></li>
+                            <li class="nav_item"><a href="services.html" class="nav_item_link">Услуги</a></li>
                             <li class="nav_item"><a href="" class="nav_item_link">Клиентам</a></li>
-                            <li class="nav_item"><a href="" class="nav_item_link">Контакты</a></li>
-                            <li class="nav_item"><a href="" class="nav_item_link">О нас</a></li>
+                            <li class="nav_item"><a href="contacts.html" class="nav_item_link">Контакты</a></li>
+                            <li class="nav_item"><a href="about.html" class="nav_item_link">О нас</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -163,7 +166,7 @@
                     </div>
                     <div class="serv_desc">
                         <h3>Обработка Ж/Д вагонов и контейнеров</h3>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="services_blank.html" class="btn" type="button">Подробнее</a>
                     </div>
                 </div>
                 <div class="serv">
@@ -173,7 +176,7 @@
                     </div>
                     <div class="serv_desc">
                         <h3>Погрузочные и разгрузочные операции</h3>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="services_blank.html" class="btn" type="button">Подробнее</a>
                     </div>
                 </div>
                 <div class="serv">
@@ -183,11 +186,11 @@
                     </div>
                     <div class="serv_desc">
                         <h3>Хранение Грузов</h3>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="services_blank.html" class="btn" type="button">Подробнее</a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="more_info">Больше Услуг</a>
+            <a href="services.html" class="more_info">Больше Услуг</a>
         </section>
         <section class="about_us">
             <div class="about_desc">
@@ -206,7 +209,36 @@
             </div>
         </section>
 
-        
+        <section class="callback">
+            <h1>Обратная связь</h1>
+            <div class="callback_container">
+                    <form id="callback_form" class="inputs" name="callback" method="post" >
+                        <div class="form_group">
+                            <label class="input_title">Имя:</label>
+                            <input class="form-control" type="text" name="callback_name" size="40">
+                        </div>
+                        <div class="form_group">
+                            <label class="input_title">Компания:</label>
+                            <input class="form-control" type="text" name="callback_company" size="30">
+                        </div>
+                        <div class="form_group">
+                            <label class="input_title">Телефон:</label>
+                            <input class="form-control" type="text" name="callback_number" size="30">
+                        </div>
+                        <!-- <div class="form_group">
+                            <label class="input_title">Как Вы про нас узнали:</label>
+                            <input class="form-control" type="text" name="callback_fe_find" size="40">
+                        </div> -->
+                        <!-- <div class="form_group">
+                            <label class="input_title">Время звонка:</label>
+                            <input class="form-control" type="text" name="callback_fe_time" size="3">
+                        </div> -->
+                        
+                    </form>
+            </div>
+            <a class="callback_delivery">Заказать</a>
+        </section>
+
     </main>
     <footer>
         <div class="footer_container">
@@ -216,7 +248,7 @@
                     width="400" height="300" frameborder="0"></iframe>
             </div>
             <div class="footer_contact">
-                <h1>Контакты</h1>
+                <h1>Ссылки</h1>
                 <ul class="footer_list">
                     <li class="footer_item">Один</li>
                     <li class="footer_item">Два</li>
@@ -231,6 +263,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/burger.js"></script>
 </body>
 
 </html>
