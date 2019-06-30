@@ -272,8 +272,8 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: var(--black-gray);
-    color: var(--white-gray);
+    background-color: var(--white-gray);
+    color: var(--black-gray);
 
 }
 
@@ -318,8 +318,8 @@ header {
 
 .image_wrapper img {
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 .services {
@@ -330,12 +330,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
+    background-color: var(--black-gray);
 }
 .services h1{
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 75px;
+    color: var(--white-gray);
 }
 
 .services_container {
@@ -349,8 +351,8 @@ header {
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    border-right: 2px solid var(--black-gray);
-    border-left: 2px solid var(--black-gray);
+    border-right: 2px solid var(--white-gray);
+    border-left: 2px solid var(--white-gray);
 }
 
 .serv {
@@ -360,6 +362,7 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--white-gray);
 }
 .serv:nth-child(2){
     background-color: var(--black-gray)
@@ -380,8 +383,17 @@ header {
 }
 .serv_desc{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.serv_desc h3{
+    text-align: center;
+    max-width: 150px;
+    mix-blend-mode: difference;
+    color: var(--white-gray);
+    font-size: 16px;
+    font-weight: 500;
 }
 .btn{
     width: 170px;
@@ -394,6 +406,22 @@ header {
     letter-spacing: 2px;
     font-family: 'Gotham Pro';
     border: 2px solid var(--white-gray);
+}
+.more_info{
+    display: flex;
+    color: var(--white-gray);
+    min-width: 200px;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gotham Pro';
+    font-size: 26px;
+    text-transform: uppercase;
+    border: 3px solid var(--white-gray);
+    box-sizing: border-box;
+    margin: 70px 0 55px 0;
+    padding: 12px 25px;
+    
 }
 
 footer{
@@ -417,7 +445,7 @@ footer{
     align-items: flex-start;
     justify-content: center;
     max-width: 700px;
-    width: 100%;
+    width: auto;
     color: var(--white-gray);
 }
 .footer_list{
@@ -430,4 +458,14 @@ footer{
 .footer_item{
     box-sizing: border-box;
     padding: 13px 0;
+}
+.footer_logo{
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
+.footer_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
