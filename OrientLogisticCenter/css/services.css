@@ -96,7 +96,21 @@ header {
 /* .contact_item .drop_arrow{
     background-image: url(../img/chevron-down-solid.svg);
 } */
-
+#language{
+    position: relative;
+}
+#language #lang1{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: 0.5s all;
+    transform: scaleY(0);
+    bottom: -200%;
+    left: 0;
+    background-color: var(--black-gray);
+}#lang1.active_drop{
+    transform: scaleY(1) !important;
+}
 .contact_list .contact_item {
     margin-left: 120px;
     position: relative;
