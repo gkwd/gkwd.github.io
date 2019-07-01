@@ -96,6 +96,21 @@ header {
 /* .contact_item .drop_arrow{
     background-image: url(../img/chevron-down-solid.svg);
 } */
+.nav_list .nav_item {
+    margin-left: 85px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(-45deg, rgba(173, 173, 174, 1) 0%, rgba(164, 164, 165,1) 50%, rgba(120, 120, 120,1) 51%, rgba(255, 255, 255, 1) 100%);
+    /* --color-120: rgb(120, 120, 120);
+    --black-gray: rgb(31, 31, 32); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    transition: ease-in 0.5s all;
+    background-size: 200%;
+}
+.nav_list .nav_item:hover{
+    background-position: 200% center;
+}
 #language{
     position: relative;
 }
@@ -103,22 +118,27 @@ header {
     position: absolute;
     width: 100%;
     height: auto;
+    -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    transform: scaleY(0);
-    bottom: -200%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    transform-origin: 0 top;
+    top: 125%;
     left: 0;
-    background-color: var(--black-gray);
-}#lang1.active_drop{
-    transform: scaleY(1) !important;
+    color: var(--black-gray);
+    font-weight: 400;
+    background-color: var(--white-gray);
+}
+#lang1.active_drop{
+    -webkit-transform: scaleY(1) !important;
+            transform: scaleY(1) !important;
+}
+.lang_item{
+    line-height: 30px;
 }
 .contact_list .contact_item {
     margin-left: 120px;
     position: relative;
-}
-
-.nav_list .nav_item {
-    margin-left: 85px;
-    text-transform: uppercase;
 }
 .main_desc{
     display: flex;
@@ -233,6 +253,28 @@ padding: 45px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-gray);
+    
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.5s ease-in;
+    z-index: -1;
+}
+.btn:hover{
+    color: var(--black-gray);
+    font-weight: 500;
+}
+.btn:hover::before{
+    transform: scaleY(1);
+    transform-origin: top;
 }
 
 footer{
