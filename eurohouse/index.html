@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendors/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendors/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <span id="burger" class="burger"></span>
+        <div class="navigation">
+            <div class="logo"><img src="img/eurodom_logo_final.png" alt=""></div>
+            <nav class="nav_bar">
+                <ul class="nav_bar_list">
+                    <li class="bar_item"> <a href="#main">Продукция</a> </li>
+                    <li class="bar_item"> <a href="#goodsId">Услуги</a> </li>
+                    <li class="bar_item"> <a href="#">Проекты</a> </li>
+                    <li class="bar_item"> <a href="#aboutUs">О нас</a> </li>
+                    <li class="bar_item"> <a href="#contacts">Контакты</a> </li>
+                    <li class="bar_item active"> <a href="#">Обратная связь</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="content_wrapper">
+        <section class="services">
+            <div class="tabs_wrapper">
+                <div class="big_tabs">
+                    <button class="big_tabs_item active" onclick="openTab(event, 'build')">Строим</button>
+                    <button class="big_tabs_item" onclick="openTab(event, 'fix')">Ремонтируем</button>
+                    <button class="big_tabs_item" onclick="openTab(event, 'product')">Продукция</button>
+                </div>
+                <div id="build" class="tabs" style="display:block;">
+                    <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Частные
+                        дома</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи и
+                        гостинницы</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Торговые и
+                        медицинские учереждения</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">SPA и салоны
+                        красоты</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                        объекты</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                        площадки</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха под
+                        барбекю</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения частные и
+                        коммерческие цели</button>
+                </div>
+                <div id="fix" class="tabs" style="display:none;">
+                    <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Дома</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Гостинницы</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Медицинские
+                        учереждения</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                        объекты</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                        площадки</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения</button>
+                </div>
+                <div id="product" class="tabs" style="display:none;">
+                    <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Частные
+                        дома</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи и
+                        гостинницы</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Торговые и
+                        медицинские учереждения</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">SPA и салоны
+                        красоты</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                        объекты</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                        площадки</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха под
+                        барбекю</button>
+                    <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения частные и
+                        коммерческие цели</button>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id="build_tabs_item-1" class="tabs_content" style="display:flex;">
+                <div class="image">
+                    <img src="img/Rectangle 3.1.png" alt="">
+                </div>
+                <div class="image_article">
+                    <h2>Частные дома</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                        rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                        Impedit odio nulla iure.</p>
+                    <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                </div>
+            </div>
+            <div id="build_tabs_item-2" class="tabs_content" style="display:none;">
+                <div class="image">
+                    <img src="img/Rectangle 3.2.png" alt="">
+                </div>
+                <div class="image_article">
+                    <h2>Частные дома</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                        rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                        Impedit odio nulla iure.</p>
+                    <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                </div>
+            </div>
+            <div id="build_tabs_item-3" class="tabs_content" style="display:none;">
+                <div class="image">
+                    <img src="img/Rectangle 3.3.png" alt="">
+                </div>
+                <div class="image_article">
+                    <h2>Частные дома</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                        rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                        Impedit odio nulla iure.</p>
+                    <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <h2 class="adv_title">Строительство со вкусом</h2>
+            <div class="adv_content">
+                <div class="adv">
+                    <div class="adv_image">
+                        <img src="img/paint-brush.png" alt="">
+                    </div>
+                    <div class="adv_text">
+                        <h3>Качественный дизайн</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                </div>
+                <div class="adv">
+                    <div class="adv_image">
+                        <img src="img/Group (1).png" alt="">
+                    </div>
+                    <div class="adv_text">
+                        <h3>Большой опыт</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                </div>
+                <div class="adv">
+                    <div class="adv_image">
+                        <img src="img/Group.png" alt="">
+                    </div>
+                    <div class="adv_text">
+                        <h3>Безопастность</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about_wrapper">
+            <div class="about">
+                <div class="about_image">
+                    <img src="img/Rectangle 3.2.png" alt="">
+                </div>
+                <div class="about_text">
+                    <h2>О компании</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Neque laoreet suspendisse interdum consectetur libero id faucibus
+                        nisl tincidunt. Nullam vehicula ipsum a arcu. A scelerisque purus semper eget duis at tellus at
+                        urna. Duis convallis convallis tellus id interdum velit laoreet id donec. Cursus sit amet dictum
+                        sit. Eget mi proin sed libero enim sed faucibus turpis. Ac felis donec et odio pellentesque diam
+                        volutpat commodo sed. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Vitae purus faucibus
+                        ornare suspendisse sed nisi lacus sed. Neque laoreet suspendisse interdum consectetur libero.
+                        Odio pellentesque diam volutpat commodo sed. Egestas egestas fringilla phasellus faucibus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery_wrapper">
+            <h2>Наши работы</h2>
+            <div class="gallery_box owl-carousel owl-theme">
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.1.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.3.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.1.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.3.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.1.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.3.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.1.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+                <div class="gallery_image">
+                    <img src="img/Rectangle 3.3.png" alt="">
+                    <a href="">Подробнее</a>
+                </div>
+            </div>
+        </section>
+        <section class="callback_wrapper">
+            <div class="callback">
+                <div class="callback_text">
+                    <h3>Внимание</h3>
+                    <p>Оставьте ваши контактные данные и наш консультант свяжется с вами в течении 30 секунд</p>
+                </div>
+                <div class="callback_forms">
+                    <form>
+                        <input class="required" placeholder="Ммя Фамилия" type="text"></input>
+                        <input class="required" placeholder="Почта" type="text"></input>
+                        <input class="required" placeholder="Phone" type="tel"></input>
+                        <button class="send" type="submit" value="Отправить">Отправить</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_block">
+            <div class="footer_contacts">
+                <h2>Контакты</h2>
+                <ul class="footer_list">
+                    <li class="footer_list_item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Узбекистан, г. Ташкент, массив Чупон ота, улица Узбектракт
+                        </span>
+                    </li>
+                    <li class="footer_list_item">
+                        <a href="">
+                            <i class="fas fa-clock"></i>
+                            <span>Invalid Date</span>
+                        </a>
+                    </li>
+                    <li class="footer_list_item">
+                        <a href="">
+                            <i class="fas fa-at"></i>
+                            <span>purefruit@info.uz</span>
+                            <span>purefruit@info.uz</span>
+                        </a>
+                    </li>
+                    <li class="footer_list_item">
+                        <i class="fas fa-phone"></i>
+                        <span>+998 01 234 56 78</span>
+                        <span>+998 01 234 56 78</span>
+                        <span>+998 01 234 56 78</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer_map">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Af1ec079b5ce2b784a648274025fab6bac8e3aad11341b1daa658e3685cbc0f9e&amp;source=constructor"
+                    frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/vendors/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+
+</html>
