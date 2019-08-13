@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <title>Главная</title>
+    <style>
+        button{
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            outline: none;
+        }
+    .services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tabs_wrapper{
+    text-align: center;
+}
+.tabs_wrapper .tabs{
+    max-width: 700px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    /* display: none; */
+}
+.big_tabs_item{
+    font-family: "PT Sans", Caption;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 23px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.75);
+    border-bottom: 3px solid transparent;
+    transition: 0.5s all;
+
+}
+.tabs_item{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.75);
+    padding-bottom: 3px;
+    transition: 0.5s all;
+    border: 3px solid transparent; 
+}
+.tabs_content{
+    max-width: 1170px;
+    max-height: 520px;
+    height: 520px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.tabs_content .image{
+    width: 870px;
+    height: 100%;
+}
+.tabs_content .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image_article{
+    width: 300px;
+    height: 100%;
+    background: #333333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px 27px;
+}
+.image_article h2{
+    font-family: "PT Sans", Caption;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+}
+.image_article p{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+}
+.image_article a{
+    color: #fff;
+    position: relative;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 70px;
+}
+.image_article a span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 40px;
+}
+.active{
+    border-bottom: 3px solid #27AE60;
+}
+    </style>
+</head>
+<body>
+        <section class="services">
+                <div class="tabs_wrapper">
+                    <div class="big_tabs" id="app">
+                        <button v-for="txt in texts" v-bind:class="{'big_tabs_item': true}" v-on:click="openTab(['event': evt, 'cityName': cn])">{{ txt }}</button>
+                        <!-- <button class="big_tabs_item active" onclick="openTab(event, 'build')">Строим</button>
+                        <button class="big_tabs_item" onclick="openTab(event, 'fix')">Ремонтируем</button>
+                        <button class="big_tabs_item" onclick="openTab(event, 'product')">Продукция</button> -->
+                    </div>
+                    <!-- <div id="build" class="tabs" style="display:block;">
+                        <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Частные
+                            дома</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи и
+                            гостинницы</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Торговые и
+                            медицинские учереждения</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">SPA и салоны
+                            красоты</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                            объекты</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                            площадки</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха под
+                            барбекю</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения частные и
+                            коммерческие цели</button>
+                    </div>
+                    <div id="fix" class="tabs" style="display:none;">
+                        <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Дома</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Гостинницы</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Медицинские
+                            учереждения</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                            объекты</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                            площадки</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения</button>
+                    </div>
+                    <div id="product" class="tabs" style="display:none;">
+                        <button class="tabs_item active" onclick="openTabContent(event, 'build_tabs_item-1')">Частные
+                            дома</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Коттеджи и
+                            гостинницы</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Торговые и
+                            медицинские учереждения</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">SPA и салоны
+                            красоты</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Офисные
+                            объекты</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-3')">Спортивные
+                            площадки</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-1')">Зоны отдыха под
+                            барбекю</button>
+                        <button class="tabs_item" onclick="openTabContent(event, 'build_tabs_item-2')">Помещения частные и
+                            коммерческие цели</button>
+                    </div> -->
+                </div>
+                </div>
+                </div>
+                <div id="build_tabs_item-1" class="tabs_content" style="display:flex;">
+                    <div class="image">
+                        <img src="img/Rectangle 3.1.png" alt="">
+                    </div>
+                    <div class="image_article">
+                        <h2>Частные дома</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                            rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                            Impedit odio nulla iure.</p>
+                        <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                    </div>
+                </div>
+                <div id="build_tabs_item-2" class="tabs_content" style="display:none;">
+                    <div class="image">
+                        <img src="img/Rectangle 3.2.png" alt="">
+                    </div>
+                    <div class="image_article">
+                        <h2>Частные дома</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                            rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                            Impedit odio nulla iure.</p>
+                        <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                    </div>
+                </div>
+                <div id="build_tabs_item-3" class="tabs_content" style="display:none;">
+                    <div class="image">
+                        <img src="img/Rectangle 3.3.png" alt="">
+                    </div>
+                    <div class="image_article">
+                        <h2>Частные дома</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, asperiores at repudiandae,
+                            rem voluptas dolore est id, totam aliquam vero neque harum maxime doloremque nesciunt expedita.
+                            Impedit odio nulla iure.</p>
+                        <a href="" class="more_info">Подробнее <span> &#8594;</span></a>
+                    </div>
+                </div>
+            </section>
+    <script src="js/vue.js"></script>
+    <script src="js/menu.vue.js"></script>
+</body>
+</html>
