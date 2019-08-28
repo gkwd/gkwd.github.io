@@ -38,7 +38,6 @@ $('.slider-for').slick({
       layer.style.transform = translate3d;
     }
   });
-
 // window.addEventListener('scroll', function(e){
 //   var yDis = window.pageYOffset;
 // querySelectorAll()

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Generator</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+        }
+
+        button {
+            background-color: #fff;
+            border: none;
+            outline: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        .form {
+            width: 750px;
+            height: 500px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+        }
+
+        .values_box {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .main-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="color"] {
+            border: 1px solid gray;
+            -webkit-appearance: slider-horizontal;
+            width: 80px;
+
+        }
+        .btn{
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box container">
+        <div class="values_box">
+<!-- Border Radius -->
+            <label for="border-range">Радиус границ</label>
+                <input type="range" id="border-range" min="0" max="42" value="0" oninput="border()">
+                <input type="text" class="value-box-item" id="border-value" value="0"><br>
+<!-- Border width -->
+            <label for="border-width-range">Толщина границ</label>
+                <input type="range" id="border-width-range" min="0" max="25" value="0" oninput="getBorderWidth()">
+                <input type="text" id="border-width-value" class="value-box-item" value="0"><br>
+<!-- width -->
+            <label for="width-range">Ширина</label>
+                <input type="range" id="width-range" min="100" max="650" value="150" oninput="getWidth()">
+                <input type="text" id="width-value" class="value-box-item" value="150"><br>
+<!-- height -->
+            <label for="height-range">Высота</label>
+                <input type="range" id="height-range" min="15" max="150" value="10" oninput="getHeight()">
+                <input type="text" id="height-value" class="value-box-item" value="15"><br>
+<!-- Font-size -->
+            <label for="font-range">Размер шрифта</label>
+                <input type="range" id="font-range" min="14" max="96" value="22" oninput="getFontSize()">
+                <input type="text" id="font-value" class="value-box-item" value="22"><br>
+<!-- Outline-->
+            <label for="out-line">Outline: <span id="act"></span> <input type="checkbox" id="out-line"
+                    onchange="setOutline()"></label>
+            <br>
+<!-- Border Style "Solid, Inset, Outset" -->
+            <label for="border-style">Стиль границ</label>
+                    <label for="brS-inset"><input type="radio" class="radioBtn" id="brS-inset" name="border-style" value="inset"
+                            oninput="getBorderStyle(this)">inset</label>
+                    <label for="brS-outset"><input type="radio" class="radioBtn" id="brS-outset" name="border-style"
+                            value="outset" oninput="getBorderStyle(this)">outset</label>
+                    <label for="brS-solid"><input type="radio" class="radioBtn" id="brS-solid" name="border-style" value="solid"
+                            oninput="getBorderStyle(this)">solid</label>
+<!-- Font-color -->
+            <label for="font-color">Цвет текста: <input type="color" class="color" id="font-color" value="#000"
+                    placeholder="font-color: HEX || RGBA" oninput="getFontColor()"></label>
+<!-- Background color -->                    
+            <label for="bg-color">Цвет фона: <input type="color" class="color" id="bg-color" value="#fff"
+                    placeholder="bg-color : HEX || RGBA" oninput="getBgColor()"></label>
+
+<!-- textarea for css code -->    
+            <textarea name="" id="txt" cols="30" rows="10"></textarea>
+
+<!-- Get css code button -->
+            <button type="button" id="btn" class="btn" onclick="getCss()">
+                Get CSS Code
+            </button>
+        </div>
+
+
+        <form action="" class="form">
+            <h1>Forms Generator</h1>
+            <input type="text" id="example" class="exam" placeholder="Name">
+        </form>
+    </div>
+    <script>
+        let ex = document.getElementById('example');
+        let txt = document.getElementById('txt');
+
+// Border
+        function border() {
+            let border_range = document.getElementById('border-range').value;
+            let border_range_value = document.getElementById('border-value');
+            border_range_value.value = border_range;
+            ex.style.borderRadius = border_range + 'px';
+        }
+// Border Width
+        function getBorderWidth() {
+            let border_width = document.getElementById('border-width-range').value;
+            let border_width_value = document.getElementById('border-width-value');
+            border_width_value.value = border_width;
+            ex.style.borderWidth = border_width + 'px';
+        }
+// Width
+        function getWidth() {
+            let in_width = document.getElementById('width-range').value;
+            let in_width_val = document.getElementById('width-value');
+            in_width_val.value = in_width;
+            ex.style.width = in_width + 'px';
+        }
+// Height
+        function getHeight() {
+            let in_height = document.getElementById('height-range').value;
+            let in_height_val = document.getElementById('height-value');
+            in_height_val.value = in_height;
+            ex.style.height = in_height + 'px';
+        }
+// Font-size
+        function getFontSize() {
+            let font_size = document.getElementById('font-range').value;
+            let font_size_val = document.getElementById('font-value');
+            font_size_val.value = font_size;
+            ex.style.fontSize = font_size + 'px';
+        }
+// Outline      TODO: Fix function, turn on doesn't work
+        function setOutline() {
+            let ol = document.getElementById('out-line');
+            let act = document.getElementById('act');
+            if (ol.checked == true) {
+                ex.style.outline = "none";
+                act.innerHTML = 'None';
+            } else if (ol.checked) {
+                ex.style.outline = "1px solid inherit";
+                act.innerHTML = 'On';
+            }
+        }
+// Border Style "Solid, Inset, Outset"
+        function getBorderStyle(el) {
+            if (el.checked) {
+                ex.style.borderStyle = el.value;
+            }
+        }
+// Font color
+        function getFontColor() {
+            let ft_color = document.getElementById('font-color');
+            ex.style.color = ft_color.value;
+        }
+// Background color
+        function getBgColor() {
+            let bg_color = document.getElementById('bg-color');
+            ex.style.backgroundColor = bg_color.value;
+        }
+// Get css code in textarea
+        function getCss() {
+            let exs = ex.getAttribute('style');
+            txt.value = exs;
+        }
+    </script>
+</body>
+
+</html>
