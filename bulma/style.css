@@ -1,0 +1,10 @@
+.is-my-img-style{
+    box-shadow: -10px 10px 58px -28px rgba(0,0,0,0.52);
+}
+
+.is-my-img-style.is-absolute{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    box-shadow: -15px -10px 58px -28px rgba(0,0,0,0.52);
+}
