@@ -1,3 +1,11 @@
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Root styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
 ::-webkit-datetime-edit {
   padding: 10px;
 }
@@ -28,6 +36,15 @@ ul {
   list-style: none;
 }
 
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Header styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
 header {
   width: 100%;
   position: relative;
@@ -43,6 +60,7 @@ header {
 .main_menu {
   width: 100%;
   height: 180px;
+  display: none;
 }
 .menu_top {
   width: 100%;
@@ -140,6 +158,14 @@ header {
   color: #fff;
 }
 
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    About section styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
 .about_project {
   padding-top: 25px;
   background: linear-gradient(
@@ -147,10 +173,6 @@ header {
     rgba(74, 59, 42, 1) 0%,
     rgba(242, 238, 238, 1) 100%
   );
-  /* background-image: url(./img/gradientBg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 .title_block {
   text-align: center;
@@ -179,12 +201,12 @@ header {
   color: #333;
 }
 ul.about_list li.about_list_item::before {
-  content: url("./img/listDot.png"); /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #ffe5bb; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  content: url("./img/listDot.png");
+  color: #ffe5bb; 
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
 }
 
 .information_block {
@@ -203,16 +225,15 @@ ul.about_list li.about_list_item::before {
   font-size: 14px;
 }
 
-.reportage {
+/* .reportage {
   padding: 35px 0;
-}
+} */
 .bring_back_block {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* margin: 70px 0; */
 }
 
 .bring_back_right {
@@ -271,9 +292,19 @@ ul.about_list li.about_list_item::before {
   margin-left: 50px;
 }
 
-.services {
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Service section styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
+
+/* .services {
   padding: 35px 0;
-}
+} */
 
 .service {
   background-color: #61513e;
@@ -315,6 +346,7 @@ table tbody tr:nth-child(1) {
 
 .tab_btn_block {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -364,7 +396,7 @@ table tbody tr:nth-child(1) {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
 }
 .fixed_info_row p {
   margin: 0;
@@ -390,13 +422,39 @@ table tbody tr:nth-child(1) {
   color: #868686;
 }
 
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Root styles : for section title
+    And container into section 
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
 .section_title {
   padding: 30px 0;
+  font-weight: normal;
   font-size: 36px;
   color: #fff;
   text-align: center;
   margin: 0;
 }
+
+.contact .container,
+.form_send .container,
+.donation .container,
+.question .container {
+  justify-content: center;
+  display: flex;
+}
+
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Form sending section styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
 
 .form_send {
   background-color: #483827;
@@ -405,12 +463,6 @@ table tbody tr:nth-child(1) {
   justify-content: center;
   align-items: center;
   padding: 65px 0;
-}
-.contact .container,
-.form_send .container,
-.donation .container {
-  justify-content: center;
-  display: flex;
 }
 .input_text::placeholder {
   color: #fff;
@@ -474,6 +526,14 @@ table tbody tr:nth-child(1) {
   background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
     95% 50% no-repeat;
 }
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Green button styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
 .submit_button {
   border: none;
   outline: none;
@@ -490,12 +550,52 @@ table tbody tr:nth-child(1) {
   background-color: #28a745;
 }
 
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Partner section styles => into Callback section
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
+.pertner_column{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #948676;
+  margin: 20px 0;
+}
+.pertner_column img{
+  width: 200px;
+  height: 190px;
+  border-radius: 15px;
+}
+.partners_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Callback section styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
 .contact {
   background-color: #312211;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 35px 0;
 }
 .contact .form_wrapper {
   width: 75%;
@@ -531,7 +631,7 @@ table tbody tr:nth-child(1) {
   width: 48%;
   max-width: 320px;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 200px;
   justify-content: center;
   align-items: center;
 }
@@ -557,6 +657,14 @@ table tbody tr:nth-child(1) {
   padding-left: 45px;
 }
 
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Donation choise section styles
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
 .donation {
   background-color: #211608;
   display: flex;
@@ -571,7 +679,9 @@ table tbody tr:nth-child(1) {
   border-radius: 15px;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 }
 
 .left_donation_block {
@@ -621,15 +731,15 @@ input[type="radio"] + label > img {
   transition: 0.5s all;
   border-radius: 15px;
 }
-.donation .left_donation_block .input_text{
-    width: 90%;
-    margin: 20px 0;
+.donation .left_donation_block .input_text {
+  width: 90%;
+  margin: 20px 0;
 }
-.donation .left_donation_block p{
-    color: #AF9981;
-    font-size: 14px;
-    line-height: 1.42857143;
-    text-align: left;
+.donation .left_donation_block p {
+  color: #af9981;
+  font-size: 14px;
+  line-height: 1.42857143;
+  text-align: left;
 }
 .right_donation_block {
   background-color: #504130;
@@ -647,6 +757,185 @@ input[type="radio"] + label > img {
   padding: 25px;
   box-sizing: border-box;
 }
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Question section styles => with "collapsible"
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+.question {
+  background-color: #402b14;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 65px 0;
+}
+.question_block {
+  width: 90%;
+  background-color: #61513e;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+.question_block .disappearing_button {
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.question_block .disappearing_button:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+.question_block .disappearing_button .shevron {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.question_block .disappearing_button .shevron::after,
+.question_block .disappearing_button .shevron::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  transition: 0.2s all;
+}
+.question_block .disappearing_button .shevron::before {
+  transform: rotate(45deg);
+  left: -6px;
+}
+.question_block .disappearing_button .shevron::after {
+  transform: rotate(-45deg);
+}
+.question_block .disappearing_button.active .shevron::after,
+.question_block .disappearing_button.active .shevron::before {
+  transform: rotate(0);
+}
+
+.question_block .hidden_text {
+  background-color: #312211;
+}
+.question_block .hidden_text p {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+  font-weight: 300;
+  line-height: 26px;
+  padding: 15px 0;
+}
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Time counter styles hh:mm:ss
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
+
+.time_counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section_subtitle {
+  font-size: 16px;
+  color: #61513e;
+}
+
+.time_text_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.time_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.time_text {
+  font-size: 85px;
+  color: #fff;
+  margin: 20px 8px;
+  background-image: url(./img/clockBg.png);
+  border-radius: 15px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.time_name {
+  color: #61513e;
+}
+
+
+footer{
+  background-color: #1a1106 ;
+  padding: 30px 0;
+}
+
+.footer_content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer_content .footer_column{
+  padding: 0 15px;
+  width: 255px;
+  
+}
+.footer_content .footer_column h4{
+  color: #fff;
+}
+.footer_content .footer_column p{
+  color: #61513e;
+  font-size: 16px;
+  line-height: 18px;
+}
+footer .footer_content .footer_column.footer_column_callback ul li p {
+  padding-left: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+footer .footer_content .footer_column.footer_column_callback ul li p i {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  font-size: 22px;
+  color: #f9ddb3;
+}
+
+footer .footer_content .footer_column .pay_acceptable {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: end;
+}
+
+
+
+
+/* 
+----------------------------------------------------------
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    Root styles : Bootstrap container
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+==========================================================
+*/
 
 .container {
   width: 100%;
@@ -675,3 +964,38 @@ input[type="radio"] + label > img {
     max-width: 1140px;
   }
 }
+
+
+
+@media (max-width: 1280px){}
+@media (max-width: 1024px){
+  .left_donation_block, .right_donation_block {
+    width: 360px;
+}
+.left_donation_block {
+  border-bottom-left-radius: 0;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.bring_back_block {
+  justify-content: center;
+}
+.right_donation_block{
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+}
+@media (max-width: 960px){}
+@media (max-width: 898px){}
+@media (max-width: 768px){}
+.contact .form_wrapper h5 {
+
+  width: 75%;
+
+}
+@media (max-width: 640px){}
+@media (max-width: 540px){}
+@media (max-width: 480px){}
+@media (max-width: 360px){}
