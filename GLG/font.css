@@ -1,0 +1,22 @@
+/* @font-face {
+    font-family: "SF Pro";
+    src: url("./assets/fonts/SFProDisplay-Light.ttf") format("truetype"),
+    url("./assets/fonts/SFProDisplay-Regular.ttf") format("ttf"),
+    url("./assets/fonts/SFProDisplay-RegularItalic.ttf") format("ttf");
+    } */
+
+@font-face {
+  font-family: "SF Pro Light";
+  src: url("./assets/fonts/SFProDisplay-Light.ttf");
+
+}
+@font-face {
+  font-family: "SF Pro Regular";
+  src: url("./assets/fonts/SFProDisplay-Regular.ttf");
+
+}
+@font-face {
+  font-family: "SF Pro Regular Italic";
+  src: url("./assets/fonts/SFProDisplay-RegularItalic.ttf");
+
+}

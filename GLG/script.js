@@ -11,7 +11,7 @@ var RADIUS_SCALE_MIN = 1;
 var RADIUS_SCALE_MAX = 1.5;
 
 var QUANTITY = 50;
-var FILL_COLOR = "#36af57";
+var FILL_COLOR = "#50EB04";
 
 var canvas;
 var context;
