@@ -314,6 +314,7 @@ main{
   padding: 0 15px;
   height: 100%;
   min-width: 240px;
+  max-width: 525px;
   display: flex;
   flex-direction: column;
 }
