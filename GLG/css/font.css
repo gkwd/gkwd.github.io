@@ -7,16 +7,16 @@
 
 @font-face {
   font-family: "SF Pro Light";
-  src: url("./assets/fonts/SFProDisplay-Light.ttf");
+  src: url("../assets/fonts/SFProDisplay-Light.ttf");
 
 }
 @font-face {
   font-family: "SF Pro Regular";
-  src: url("./assets/fonts/SFProDisplay-Regular.ttf");
+  src: url("../assets/fonts/SFProDisplay-Regular.ttf");
 
 }
 @font-face {
   font-family: "SF Pro Regular Italic";
-  src: url("./assets/fonts/SFProDisplay-RegularItalic.ttf");
+  src: url("../assets/fonts/SFProDisplay-RegularItalic.ttf");
 
 }

@@ -1,59 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400i,500i&display=swap&subset=cyrillic" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="font.css"> -->
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Exo+2:400i,500i&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>GLG -- Green Light Games</title>
-</head>
-<body>
-    <div id="particales_block">
-        <h1 class="glg-title">GLG</h1>
-        <p class="glg-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quaerat rerum reiciendis sequi voluptatum sint praesentium incidunt?
-        </p>
-        <canvas id="world"></canvas>
-    </div>
+  </head>
+  <body>
+    <!-- <div id="particales_block">
+      <h1 class="glg-title">GLG</h1>
+      <p class="glg-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        quaerat rerum reiciendis sequi voluptatum sint praesentium incidunt?
+      </p>
+      <canvas id="world"></canvas>
+    </div> -->
 
+    <button id="back-to-top">
+        <img src="./assets/img/chevron-up-solid.svg" alt="" srcset="">
+    </button>
     <header>
-        <div class="header-navigation">
-            <div class="logo_block">
-                <img src="./assets/img/Logo_Block.png" alt="" srcset="">
-                <!-- <img src="https://tuiweb.imgix.net/images/footer/ftr-bbc-logo.png?w=800&auto=compress" alt="" srcset=""> -->
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-menu-item">
-                        <span class="top"></span>
-                        <span class="left"></span>
-                        <span class="bottom"></span>
-                        <span class="right"></span>
-                        <a href="" class="nav-item-link">Home</a>
-                    </li>
-                    <li class="nav-menu-item">
-                        <span class="top"></span>
-                        <span class="left"></span>
-                        <span class="bottom"></span>
-                        <span class="right"></span>
-                        <a href="" class="nav-item-link">Employeers</a>
-                    </li>
-                    <li class="nav-menu-item">
-                        <span class="top"></span>
-                        <span class="left"></span>
-                        <span class="bottom"></span>
-                        <span class="right"></span>
-                        <a href="" class="nav-item-link">Carier</a>
-                    </li>
-                </ul>
-            </nav>
+      <div class="header-navigation container">
+        <div class="logo_block">
+          <img src="./assets/img/Logo_Block.png" alt="" srcset="" />
+          <!-- <img src="https://tuiweb.imgix.net/images/footer/ftr-bbc-logo.png?w=800&auto=compress" alt="" srcset=""> -->
         </div>
-        <div style="width: 100%;height: 1000px;">
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <span class="top"></span>
+              <span class="left"></span>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <a href="#" class="nav-item-link">Главная</a>
+            </li>
+            <li class="nav-menu-item">
+              <span class="top"></span>
+              <span class="left"></span>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <a href="#main" class="nav-item-link">Сотрудники</a>
+            </li>
+            <li class="nav-menu-item">
+              <span class="top"></span>
+              <span class="left"></span>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <a href="#" class="nav-item-link">Вакансии</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
+      <div class="header-text-block container">
+        <div class="text-wrapper">
+          <h1 class="glg-title">
+            GLG
+          </h1>
+          <p class="glg-desc">
+            Далеко-далеко за словесными горами в стране гласных и согласных
+            живут рыбные тексты. Своих даль переписали снова, всеми, дороге
+            встретил коварный безорфографичный ее залетают она наш силуэт
+            текстами вершину несколько продолжил рукописи. Всемогущая!
+          </p>
         </div>
+      </div>
     </header>
-    <script src="./script.js"></script>
-</body>
+    <main id="main">
+      <h1 class="title">Сотрудники</h1>
+      <div class="content-block container">
+
+        <div class="employee-block">
+          <div class="employee-img">
+            <img src="https://cdn2.f-cdn.com/contestentries/1347911/26645021/5b20cdd3e3708_thumb900.jpg" alt="" srcset="" />
+          </div>
+          <div class="employee-text">
+            <h3 class="employee-name">Иван Иванович</h3>
+            <p class="employee-desc">
+              Далеко-далеко за словесными горами в стране, гласных и согласных
+              живут рыбные тексты. Речью языком всеми меня семантика дорогу,
+              первую текст, маленький, эта маленькая подзаголовок великий решила
+              ты. Однажды заманивший большого за курсивных.
+            </p>
+          </div>
+        </div>
+        <div class="employee-block">
+            <div class="employee-img">
+              <img src="https://cdn2.f-cdn.com/contestentries/1347911/26645021/5b20cdd3e3708_thumb900.jpg" alt="" srcset="" />
+            </div>
+            <div class="employee-text">
+              <h3 class="employee-name">Иван Иванович</h3>
+              <p class="employee-desc">
+                Далеко-далеко за словесными горами в стране, гласных и согласных
+                живут рыбные тексты. Речью языком всеми меня семантика дорогу,
+                первую текст, маленький, эта маленькая подзаголовок великий решила
+                ты. Однажды заманивший большого за курсивных.
+              </p>
+            </div>
+          </div>
+          <div class="employee-block">
+            <div class="employee-img">
+              <img src="https://cdn2.f-cdn.com/contestentries/1347911/26645021/5b20cdd3e3708_thumb900.jpg" alt="" srcset="" />
+            </div>
+            <div class="employee-text">
+              <h3 class="employee-name">Иван Иванович</h3>
+              <p class="employee-desc">
+                Далеко-далеко за словесными горами в стране, гласных и согласных
+                живут рыбные тексты. Речью языком всеми меня семантика дорогу,
+                первую текст, маленький, эта маленькая подзаголовок великий решила
+                ты. Однажды заманивший большого за курсивных.
+              </p>
+            </div>
+          </div>
+          <div class="employee-block">
+              <div class="employee-img">
+                <img src="https://cdn2.f-cdn.com/contestentries/1347911/26645021/5b20cdd3e3708_thumb900.jpg" alt="" srcset="" />
+              </div>
+              <div class="employee-text">
+                <h3 class="employee-name">Иван Иванович</h3>
+                <p class="employee-desc">
+                  Далеко-далеко за словесными горами в стране, гласных и согласных
+                  живут рыбные тексты. Речью языком всеми меня семантика дорогу,
+                  первую текст, маленький, эта маленькая подзаголовок великий решила
+                  ты. Однажды заманивший большого за курсивных.
+                </p>
+              </div>
+            </div>
+
+      </div>
+    </main>
+    <footer>
+        <div class="footer-ctn container">
+            <div class="footer-contacts">
+                <h2 class="contacts-title">
+                    Контакты
+                </h2>
+                <ul class="contacts-list">
+                    <li class="contact-item">008.649.9390 x383</li>
+                    <li class="contact-item">1-293-888-5471</li>
+                    <li class="contact-item">(145) 809-0044</li>
+                    <li class="contact-item">326-286-7610 x323</li>
+                    <li class="contact-item">112-310-7342 x08987</li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h2 class="contacts-title">
+                    Информация
+                </h2>
+                <ul class="contacts-list">
+                    <li class="contact-item">008.649.9390 x383</li>
+                    <li class="contact-item">1-293-888-5471</li>
+                    <li class="contact-item">(145) 809-0044</li>
+                    <li class="contact-item">326-286-7610 x323</li>
+                    <li class="contact-item">112-310-7342 x08987</li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h2 class="contacts-title">
+                    Что то исче)
+                </h2>
+                <ul class="contacts-list">
+                    <li class="contact-item">008.649.9390 x383</li>
+                    <li class="contact-item">1-293-888-5471</li>
+                    <li class="contact-item">(145) 809-0044</li>
+                    <li class="contact-item">326-286-7610 x323</li>
+                    <li class="contact-item">112-310-7342 x08987</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
