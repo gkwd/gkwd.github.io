@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.c25b5800.chunk.css",
-    "main.js": "./static/js/main.7c8fbdc5.chunk.js",
-    "main.js.map": "./static/js/main.7c8fbdc5.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.610cb9d3.js",
-    "runtime-main.js.map": "./static/js/runtime-main.610cb9d3.js.map",
-    "static/js/2.68b5bf82.chunk.js": "./static/js/2.68b5bf82.chunk.js",
-    "static/js/2.68b5bf82.chunk.js.map": "./static/js/2.68b5bf82.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.36b3d5f490cedb9f88626a6e2e69b9f0.js": "./precache-manifest.36b3d5f490cedb9f88626a6e2e69b9f0.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.c25b5800.chunk.css.map": "./static/css/main.c25b5800.chunk.css.map",
-    "static/js/2.68b5bf82.chunk.js.LICENSE.txt": "./static/js/2.68b5bf82.chunk.js.LICENSE.txt",
-    "static/media/Header.css": "./static/media/BG_Fon.24c52d01.png",
-    "static/media/Fonts.css": "./static/media/SFProDisplay-RegularItalic.455c86e2.ttf"
+    "main.css": "/build/static/css/main.92e7fd14.chunk.css",
+    "main.js": "/build/static/js/main.77714f54.chunk.js",
+    "main.js.map": "/build/static/js/main.77714f54.chunk.js.map",
+    "runtime-main.js": "/build/static/js/runtime-main.6af215a2.js",
+    "runtime-main.js.map": "/build/static/js/runtime-main.6af215a2.js.map",
+    "static/js/2.20d906ee.chunk.js": "/build/static/js/2.20d906ee.chunk.js",
+    "static/js/2.20d906ee.chunk.js.map": "/build/static/js/2.20d906ee.chunk.js.map",
+    "index.html": "/build/index.html",
+    "precache-manifest.c7c3ecca2865f26423c94fe69ef8ad04.js": "/build/precache-manifest.c7c3ecca2865f26423c94fe69ef8ad04.js",
+    "service-worker.js": "/build/service-worker.js",
+    "static/css/main.92e7fd14.chunk.css.map": "/build/static/css/main.92e7fd14.chunk.css.map",
+    "static/js/2.20d906ee.chunk.js.LICENSE.txt": "/build/static/js/2.20d906ee.chunk.js.LICENSE.txt",
+    "static/media/Header.css": "/build/static/media/BG_Fon.24c52d01.png",
+    "static/media/Logo_Block.png": "/build/static/media/Logo_Block.082b3ff4.png",
+    "static/media/Fonts.css": "/build/static/media/SFProDisplay-RegularItalic.455c86e2.ttf"
   },
   "entrypoints": [
-    "./static/js/runtime-main.610cb9d3.js",
-    "./static/js/2.68b5bf82.chunk.js",
-    "./static/css/main.c25b5800.chunk.css",
-    "./static/js/main.7c8fbdc5.chunk.js"
+    "static/js/runtime-main.6af215a2.js",
+    "static/js/2.20d906ee.chunk.js",
+    "static/css/main.92e7fd14.chunk.css",
+    "static/js/main.77714f54.chunk.js"
   ]
 }
