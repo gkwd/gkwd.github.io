@@ -214,10 +214,10 @@ span.right {
 }
 .text-wrapper .glg-title {
   color: #339a00;
-  font-size: 84px;
-  font-family: sans-serif;
-  margin: 0;
-  text-decoration: underline;
+    font-size: 36px;
+    font-family: "SF Pro Light", sans-serif;
+    margin: 0;
+    text-decoration: underline;
 }
 .text-wrapper .glg-desc {
   color: #fff;
