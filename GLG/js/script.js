@@ -31,15 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const lines = document.getElementById("lines");
 
-  for (let index = 0; index < 25; index++) {
+  for (let index = 0; index < 11; index++) {
     var divsize = (Math.random() * 100 + 50).toFixed();
     var posx = (Math.random() * (document.body.clientWidth  - divsize)).toFixed();
     console.table(divsize, posx);
+    console.log(document.body.clientWidth);
     
+    let expPos = document.body.clientWidth * (0.1 * index);
     const line = document.createElement("div");
     line.classList.add("line");
     line.style.position = 'absolute';
-    line.style.left = posx + 'px';
+    line.style.left = expPos + 'px';
 
     lines.appendChild(line);
     console.log(line);

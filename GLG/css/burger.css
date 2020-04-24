@@ -25,7 +25,7 @@
 .burger {
     display: flex;
     transition: 0.5s all ease-in;
-    transition-delay: 0.3s;
+    /* transition-delay: 0.3s; */
     width: 30px;
     height: 2px;
     position: relative;
