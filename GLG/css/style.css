@@ -548,7 +548,7 @@ body {
   height: 100%;
   top: 0;
   /* left: 50%; */
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   overflow: hidden;
 }
 #lines .line::after {
