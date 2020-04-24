@@ -3,34 +3,7 @@
   user-select: none;
 }
 
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
+
 
 html,
 body {
@@ -56,7 +29,8 @@ ul {
   position: fixed;
   z-index: 10000;
   bottom: 7%;
-  right: 7%;
+  left: 7%;
+  display: none;
   border-radius: 50%;
   box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
   align-items: center;
@@ -81,7 +55,7 @@ ul {
 
 header {
   height: 100vh;
-  width: 100%;
+  width: calc(100% - 360px);
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -121,30 +95,37 @@ header {
   object-fit: contain;
 }
 nav {
-  max-width: 720px;
+  position: fixed;
+  max-width: 360px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  background-color: #000; 
+  z-index: 2;
+  /* rgba(113, 130, 103, 0.8); */
 }
 .nav-menu {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   padding: 0;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .nav-menu-item {
   font: normal normal 18px "SF Pro Light", sans-serif;
-  width: 100px;
+  min-width: 100px;
   height: 40px;
-  margin: 0 20px;
+  margin: 20px;
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   transition: 0.5s all;
   color: #fff;
   position: relative;
@@ -208,23 +189,25 @@ span.right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
   color: #fff;
   height: 100%;
+  padding-bottom: 4%;
 }
 .text-wrapper .glg-title {
   color: #339a00;
-    font-size: 36px;
-    font-family: "SF Pro Light", sans-serif;
-    margin: 0;
-    text-decoration: underline;
+  font-size: 20px;
+  font-family: "UI Pro Thin", sans-serif;
+  margin: 0;
+  text-decoration: underline;
 }
 .text-wrapper .glg-desc {
+  text-indent: 20px;
   color: #fff;
-  font-size: 22px;
+  font-size: 16px;
   max-width: 480px;
   font-weight: 100;
-  font-family: "SF Pro Light", sans-serif;
+  font-family: "UI Pro Ultralight", sans-serif;
   min-width: 280px;
   letter-spacing: 1px;
 }
@@ -234,11 +217,12 @@ main {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 100px;
+  width: calc(100% - 360px);
 }
 .title {
   color: #fff;
-  font-family: "SF Pro Regular", sans-serif;
-  font-size: 36px;
+  font-family: "SF Pro Light", sans-serif;
+  font-size: 24px;
   letter-spacing: 3px;
   text-transform: uppercase;
   position: relative;
@@ -279,10 +263,10 @@ main {
 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 45%;
   overflow: hidden;
   position: relative;
-  margin: 50px 0;
+  margin: 0 0 75px 0;
 }
 .tech-block::after {
   content: attr(data-text);
@@ -305,8 +289,8 @@ main {
 .tech-title {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 35px;
-  font-family: "SF Pro Regular", sans-serif;
+  font-size: 20px;
+  font-family: "SF Pro Light", sans-serif;
   align-self: flex-end;
 }
 
@@ -315,6 +299,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 35px;
 }
 
 .employee-block {
@@ -322,7 +307,6 @@ main {
   align-items: center;
   flex-wrap: wrap;
   border: 1px solid #fff;
-  border-radius: 10px;
   max-width: 768px;
   min-height: 236px;
   /* height: 240px; */
@@ -336,12 +320,12 @@ main {
 .employee-block:nth-child(even) {
   flex-direction: row-reverse;
 }
-.employee-block:nth-child(even) .employee-img img {
+/* .employee-block:nth-child(even) .employee-img img {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-}
+} */
 
 .employee-img {
   width: 30%;
@@ -353,8 +337,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
 }
 .employee-text {
   width: 70%;
@@ -367,21 +349,21 @@ main {
   flex-direction: column;
 }
 h3.employee-name {
-  font-size: 24px;
-  font-family: "SF Pro Regular", sans-serif;
+  font-size: 22px;
+  font-family: "UI Pro Light", sans-serif;
   letter-spacing: 2px;
 }
 p.employee-desc {
-  font-size: 18px;
-  font-family: "SF Pro Regular", sans-serif;
+  font-size: 16px;
+  font-family: "UI Pro Thin", sans-serif;
   letter-spacing: 0.02rem;
   line-height: 23px;
 }
 
 footer {
   background-color: #339a00;
-  width: 100%;
-  padding: 25px 0;
+  width: calc(100% - 360px);
+  padding: 12px 0;
 }
 .footer-ctn {
   display: flex;
@@ -400,27 +382,27 @@ footer {
 }
 .contacts-title {
   color: #fff;
-  font-family: "SF Pro Regular", sans-serif;
-  font-size: 28px;
+  font-family: "UI Pro Light", sans-serif;
+  font-size: 24px;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 .contact-item {
   color: #fff;
-  font-family: "SF Pro Regular", sans-serif;
-  font-size: 15px;
+  font-family: "UI Pro Thin", sans-serif;
+  font-size: 16px;
   line-height: 28px;
   letter-spacing: 4px;
 }
-.copyright h5{
+.copyright h5 {
   color: #fff;
-  font-size: 16px;
-  font-family: "SF pro Regular Italic", sans-serif;
+  font-size: 14px;
+  font-family: "UI Pro Thin", sans-serif;
   letter-spacing: 2px;
   font-weight: 200;
-  padding: 20px 0;
+  padding: 12px 0 0 0;
+  margin: 20px 0 0 0;
   border-top: 1px solid black;
-
 }
 @media (max-width: 1280px) {
 }
@@ -443,7 +425,7 @@ footer {
     min-width: 240px;
     display: flex;
   }
-  .employee-img img{
+  .employee-img img {
     border-bottom-left-radius: 0;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 0;
