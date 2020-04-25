@@ -9,7 +9,6 @@
     <title>GLG -- Green Light Games</title>
   </head>
   <body>
-
     <span id="burger">
       <span class="burger"></span>
     </span>
@@ -23,26 +22,20 @@
           <!-- <img src="https://tuiweb.imgix.net/images/footer/ftr-bbc-logo.png?w=800&auto=compress" alt="" srcset=""> -->
         </div>
         <nav>
-         
           <ul class="nav-menu">
             <li class="nav-menu-item">
-              
               <a href="#header" class="nav-item-link">Главная</a>
             </li>
             <li class="nav-menu-item">
-              
               <a href="#tech" class="nav-item-link">Инструменты</a>
             </li>
             <li class="nav-menu-item">
-              
               <a href="#empl" class="nav-item-link">Команда</a>
             </li>
             <li class="nav-menu-item">
-              
               <a href="#" class="nav-item-link">Блог</a>
             </li>
             <li class="nav-menu-item">
-              
               <a href="#" class="nav-item-link">Контакты</a>
             </li>
           </ul>
@@ -50,8 +43,23 @@
       </div>
 
       <div class="header-text-block container">
-        <div class="text-wrapper">
-          <h1 class="glg-title">
+        <!-- <div class="text-wrapper"> -->
+
+        <form action="">
+          <div class="email-wrapper">
+            <input
+              type="email"
+              class="input input-email"
+              placeholder="Email или Телефон"
+              name=""
+              id="e-mail"
+              required
+            />
+            <button type="submit" class="send-btn">Отправить</button>
+          </div>
+          <textarea id="textarea" rows="6" placeholder="Koмментарий"></textarea>
+        </form>
+        <!-- <h1 class="glg-title">
             Ideal Green Light GAMES
           </h1>
           <p class="glg-desc">
@@ -65,11 +73,11 @@
             Образованная в 2020 году,
             команда, дочерней компании IGL, решила воплотить давние мечты -
             создавать игры, которые цепляют за душу.
-          </p>
-        </div>
+          </p> -->
+        <!-- </div> -->
       </div>
     </header>
-    <main >
+    <main>
       <!-- <h2 class="title">Программирование</h2>
         <div class="pl-block container">
           <div class="pl-desc"> 
@@ -86,21 +94,27 @@
         <div
           class="tech-block"
           data-text="Unity — межплатформенная среда разработки компьютерных игр. Unity позволяет создавать приложения, работающие под более чем 20 различными операционными системами, включающими персональные компьютеры, игровые консоли, мобильные устройства, интернет-приложения и другие."
-          style="background-image: url('https://upload.wikimedia.org/wikipedia/ru/a/a3/Unity_Logo.png');"
+          style="
+            background-image: url('https://upload.wikimedia.org/wikipedia/ru/a/a3/Unity_Logo.png');
+          "
         >
           <h3 class="tech-title">Unity3D</h3>
         </div>
         <div
           class="tech-block"
           data-text="Unity — межплатформенная среда разработки компьютерных игр. Unity позволяет создавать приложения, работающие под более чем 20 различными операционными системами, включающими персональные компьютеры, игровые консоли, мобильные устройства, интернет-приложения и другие."
-          style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Visual_Studio_2017_Logo.svg/1200px-Visual_Studio_2017_Logo.svg.png');"
+          style="
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Visual_Studio_2017_Logo.svg/1200px-Visual_Studio_2017_Logo.svg.png');
+          "
         >
           <h3 class="tech-title">Visual Studio</h3>
         </div>
         <div
           class="tech-block"
           data-text="Unity — межплатформенная среда разработки компьютерных игр. Unity позволяет создавать приложения, работающие под более чем 20 различными операционными системами, включающими персональные компьютеры, игровые консоли, мобильные устройства, интернет-приложения и другие."
-          style="background-image: url('https://upload.wikimedia.org/wikipedia/ru/a/a3/Unity_Logo.png');"
+          style="
+            background-image: url('https://upload.wikimedia.org/wikipedia/ru/a/a3/Unity_Logo.png');
+          "
         >
           <h3 class="tech-title">Unity3D</h3>
         </div>
@@ -225,9 +239,7 @@
       </div>
     </footer>
 
-
-    <div id="lines">
-    </div>
+    <div id="lines"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>

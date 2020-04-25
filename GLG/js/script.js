@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  var backToTop = document.getElementById("back-to-top");
+  const backToTop = document.getElementById("back-to-top");
 
   window.addEventListener("scroll", (e) => {
     if (window.scrollY > 300) {
@@ -23,27 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("avtive_mobile_nav");
   });
 
-  // var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
-
-  // make position sensitive to size and document's width
-  // var posx = (Math.random() * (document.width - divsize)).toFixed();
-  // var posy = (Math.random() * (document.height - divsize)).toFixed();
-
   const lines = document.getElementById("lines");
 
   for (let index = 0; index < 11; index++) {
-    var divsize = (Math.random() * 100 + 50).toFixed();
-    var posx = (Math.random() * (document.body.clientWidth  - divsize)).toFixed();
-    console.table(divsize, posx);
-    console.log(document.body.clientWidth);
-    
+    // var divsize = (Math.random() * 100 + 50).toFixed();
+    // var posx = (Math.random() * (document.body.clientWidth  - divsize)).toFixed();
+
     let expPos = document.body.clientWidth * (0.1 * index);
     const line = document.createElement("div");
     line.classList.add("line");
-    line.style.position = 'absolute';
-    line.style.left = expPos + 'px';
+    line.style.position = "absolute";
+    line.style.left = expPos + "px";
 
     lines.appendChild(line);
-    console.log(line);
   }
+
+  const input = document.getElementById("e-mail");
+  const textArea = document.getElementById("textarea");
+  textArea.style.transform = "scale(0, 0)";
+  console.log(input);
+
+  input.addEventListener("input", (e) => {
+    let val = input.value.trim();
+    if (val != "") {
+      textArea.style.transform = "scale(1, 1)";
+    } else {
+      textArea.value = null;
+      textArea.style.transform = "scale(0, 0)";
+    }
+  });
 });
