@@ -52,4 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
       textArea.style.transform = "scale(0, 0)";
     }
   });
+
+  document.querySelector(".logo_block img").addEventListener("click", () => {
+    document.body.setAttribute("data-theme", document.body.getAttribute("data-theme") == "dark" ? "light" : "dark")
+  })
+  // document.documentElement.setAttribute('data-theme', 'dark')
+  // document.documentElement.setAttribute('data-theme', 'light')
 });
