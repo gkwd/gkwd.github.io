@@ -1,0 +1,88 @@
+#pre {
+    display: flex;
+    flex-direction: column;
+  }
+  .separator{
+      height: 2px;
+      background: #555;
+      margin: 15px 0;
+  }
+  .keyValueBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+  }
+  .keyValueBlock .title {
+    margin: 0;
+    font-family: "Baloo Bhaina 2", cursive;
+    color: rgb(119, 0, 255);
+  }
+  .keyValueBlock .keyValueBlock {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+  }
+  .keyValueBlock .keyValueBlock .key {
+    color: orange;
+  }
+
+  span {
+    font-family: "Raleway", sans-serif;
+    
+  }
+  .string {
+    color: rgb(128, 0, 100);
+  }
+
+  .number {
+    color: #2600ff;
+  }
+
+  .boolean {
+    color: rgb(0, 255, 76);
+  }
+
+  .null {
+    color: #ff0000;
+  }
+
+  span.key {
+    font-family: "Baloo Bhaina 2", cursive;
+    color: #000;
+  }
+
+
+
+  .input.input-email {
+    width: 360px;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 14px;
+    /* font: inherit; */
+  
+    border: 0;
+    outline: 0;
+    padding: 18px 18px;
+    box-sizing: border-box;
+  }
+  .send-btn {
+    /* align-self: flex-end; */
+    background: #243244; 
+    /* rgba(98, 160, 70, 0.35); */
+    color: #fff;
+    font-family: "SF Pro Regular", sans-serif;
+    font-size: 14px;
+    border: 0;
+    outline: 0;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+    padding: 18px 22px;
+  }
