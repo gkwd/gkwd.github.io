@@ -1,6 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-  console.log(document.baseURI)
+function fadeOut(time, target) {
+  var fadeTarget = document.querySelector(target);
+  var fadeEffect = setInterval(function () {
+    if (!fadeTarget.style.opacity) {
+      fadeTarget.style.opacity = 1;
+    }
+    if (fadeTarget.style.opacity > 0) {
+      fadeTarget.style.opacity -= 0.01;
+      console.log(fadeTarget.style.opacity);
+      
+    } else {
+      console.log(fadeTarget.style.opacity + "removing");
+      clearInterval(fadeEffect);
+      fadeTarget.remove();
+    }
+  }, time);
+}
+window.addEventListener("load", () => {
+  fadeOut(10, ".loader_inner");
+  fadeOut(10, ".loader");
+  // console.log(document.baseURI);
 
   const backToTop = document.getElementById("back-to-top");
 
@@ -59,12 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".logo_block img").addEventListener("click", () => {
     let theme = document.body.getAttribute("data-theme");
     console.log(theme);
-    
+
     let imgLogo = document.querySelectorAll("img.logo");
     console.log(imgLogo);
-    
-    document.body.setAttribute("data-theme", theme == "dark" ? "light" : "dark");
 
+    document.body.setAttribute(
+      "data-theme",
+      theme == "dark" ? "light" : "dark"
+    );
 
     if (theme == "dark") {
       for (let index = 0; index < imgLogo.length; index++) {
@@ -75,8 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
         imgLogo[index].setAttribute("src", "./assets/img/Logo_Block.png");
       }
     }
-    
-  })
-  // document.documentElement.setAttribute('data-theme', 'dark')
-  // document.documentElement.setAttribute('data-theme', 'light')
+  });
 });
