@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  console.log(document.baseURI)
+
   const backToTop = document.getElementById("back-to-top");
 
   window.addEventListener("scroll", (e) => {
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const lines = document.getElementById("lines");
 
-  for (let index = 0; index < 11; index++) {
+  for (let index = 0; index < 25; index++) {
     // var divsize = (Math.random() * 100 + 50).toFixed();
     // var posx = (Math.random() * (document.body.clientWidth  - divsize)).toFixed();
 
@@ -54,7 +57,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".logo_block img").addEventListener("click", () => {
-    document.body.setAttribute("data-theme", document.body.getAttribute("data-theme") == "dark" ? "light" : "dark")
+    let theme = document.body.getAttribute("data-theme");
+    console.log(theme);
+    
+    let imgLogo = document.querySelectorAll("img.logo");
+    console.log(imgLogo);
+    
+    document.body.setAttribute("data-theme", theme == "dark" ? "light" : "dark");
+
+
+    if (theme == "dark") {
+      for (let index = 0; index < imgLogo.length; index++) {
+        imgLogo[index].setAttribute("src", "./assets/img/Logo-inverted.png");
+      }
+    } else {
+      for (let index = 0; index < imgLogo.length; index++) {
+        imgLogo[index].setAttribute("src", "./assets/img/Logo_Block.png");
+      }
+    }
+    
   })
   // document.documentElement.setAttribute('data-theme', 'dark')
   // document.documentElement.setAttribute('data-theme', 'light')
