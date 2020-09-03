@@ -6,7 +6,7 @@ function fadeOut(time, target) {
     }
     if (fadeTarget.style.opacity > 0) {
       fadeTarget.style.opacity -= 0.01;
-      console.log(fadeTarget.style.opacity);
+      // console.log(fadeTarget.style.opacity);
       
     } else {
       console.log(fadeTarget.style.opacity + "removing");
@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   const input = document.getElementById("e-mail");
   const textArea = document.getElementById("textarea");
   textArea.style.transform = "scale(0, 0)";
-  console.log(input);
+  // console.log(input);
 
   input.addEventListener("input", (e) => {
     let val = input.value.trim();

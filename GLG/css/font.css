@@ -21,18 +21,3 @@
 
 }
 
-@font-face {
-  font-family: "UI Pro Light";
-  src: url("../assets/fonts/sf-display-light.otf");
-
-}
-@font-face {
-  font-family: "UI Pro Thin";
-  src: url("../assets/fonts/sf-display-thin.otf");
-
-}
-@font-face {
-  font-family: "UI Pro Ultralight";
-  src: url("../assets/fonts/sf-display-ultralight.otf");
-
-}
