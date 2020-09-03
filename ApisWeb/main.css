@@ -1,0 +1,143 @@
+:root {
+  --accentColor: #2f80ed;
+  --green: #2da771;
+  --yellow: #fedd12;
+  font-size: 18px;
+}
+html,
+body {
+  font-family: Gilroy, sans-serif;
+
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+img {
+  /* width: 100%;
+    height: 100%; */
+  object-fit: contain;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 6wrem;
+  text-transform: uppercase;
+}
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5rem;
+  color: var(--accentColor);
+  /* padding-right: 1rem;
+    padding-left: 1rem; */
+}
+
+p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  /* padding-right: 1rem;
+    padding-left: 1rem; */
+  text-align: justify;
+}
+
+p.speed-text {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.btn {
+  padding: 0.5rem 1.8rem;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 0;
+  outline: 0;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-black {
+  color: #000000;
+}
+.text-yellow {
+  color: var(--yellow);
+}
+
+.btn-blue {
+  background-color: var(--accentColor);
+}
+.btn-green {
+  background-color: var(--green);
+}
+.btn-transparent {
+  background: transparent;
+  border: 2px solid #fff;
+}
+.btn-yellow {
+  background-color: var(--yellow);
+}
+
+header {
+  height: 100vh;
+  background-image: url("https://via.placeholder.com/1920x1080.png/09f/09f");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav.navigation {
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+ul.navigation-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+.menu-item:hover .menu-item-link {
+  color: var(--yellow);
+}
+.menu-item-link {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  transition: 0.3s color ease-in;
+}
