@@ -6,8 +6,7 @@ function fadeOut(time, target) {
     }
     if (fadeTarget.style.opacity > 0) {
       fadeTarget.style.opacity -= 0.01;
-      console.log(fadeTarget.style.opacity);
-      
+      // console.log(fadeTarget.style.opacity);
     } else {
       console.log(fadeTarget.style.opacity + "removing");
       clearInterval(fadeEffect);
@@ -15,55 +14,104 @@ function fadeOut(time, target) {
     }
   }, time);
 }
+
+function showTopButton(e, elem) {
+  if (window.pageYOffset > 300) {
+    elem.style.display = "flex";
+  } else {
+    elem.style.display = "none";
+  }
+}
+
+function toTop(e) {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+}
+
 window.addEventListener("load", () => {
   fadeOut(10, ".loader_inner");
   fadeOut(10, ".loader");
-  // console.log(document.baseURI);
+
+  /**
+   *
+   * ====================================================================
+   *
+   *                        DOM Elements
+   *
+   * ====================================================================
+   *
+   *
+   */
 
   const backToTop = document.getElementById("back-to-top");
-
-  window.addEventListener("scroll", (e) => {
-    if (window.scrollY > 300) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-
-  backToTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-  });
-
+  const lines = document.getElementById("lines");
   const burgerBlock = document.getElementById("burger");
   const burger = document.querySelector(".burger");
   const nav = document.querySelector("nav");
+  const input = document.getElementById("e-mail");
+  const textArea = document.getElementById("textarea");
+/**
+   *
+   * ====================================================================
+   *
+   *                        Show To Top Button
+   *
+   * 
+   *                        Go To Top Button Event
+   * ====================================================================
+   *
+   *
+   */
+  window.addEventListener("scroll", (e) => showTopButton(e, backToTop));
 
+  backToTop.addEventListener("click", toTop);
+/**
+   *
+   * ====================================================================
+   *
+   *                        Burger Menu
+   *
+   * ====================================================================
+   *
+   *
+   */
   burgerBlock.addEventListener("click", function () {
     burger.classList.toggle("active_burger");
     nav.classList.toggle("avtive_mobile_nav");
   });
 
-  const lines = document.getElementById("lines");
-
+  /**
+   *
+   * ====================================================================
+   *
+   *                        Background Random Lines
+   *
+   * ====================================================================
+   *
+   *
+   */
   for (let index = 0; index < 25; index++) {
-    // var divsize = (Math.random() * 100 + 50).toFixed();
-    // var posx = (Math.random() * (document.body.clientWidth  - divsize)).toFixed();
-
     let expPos = document.body.clientWidth * (0.1 * index);
     const line = document.createElement("div");
     line.classList.add("line");
     line.style.position = "absolute";
     line.style.left = expPos + "px";
-
     lines.appendChild(line);
   }
 
-  const input = document.getElementById("e-mail");
-  const textArea = document.getElementById("textarea");
-  textArea.style.transform = "scale(0, 0)";
-  console.log(input);
 
+
+
+  /**
+   *
+   * ====================================================================
+   *
+   *                        TextArea animation for Description
+   *
+   * ====================================================================
+   *
+   *
+   */
   input.addEventListener("input", (e) => {
     let val = input.value.trim();
     if (val != "") {
@@ -73,7 +121,16 @@ window.addEventListener("load", () => {
       textArea.style.transform = "scale(0, 0)";
     }
   });
-
+  /**
+   *
+   * ====================================================================
+   *
+   *                        Toggle Theme
+   *
+   * ====================================================================
+   *
+   *
+   */
   document.querySelector(".logo_block img").addEventListener("click", () => {
     let theme = document.body.getAttribute("data-theme");
     console.log(theme);

@@ -67,6 +67,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  /* overflow: hidden; */
 }
 
 a {
@@ -472,7 +473,7 @@ footer {
 }
 
 p.phone-number {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--white);
   font-family: "SF Pro Light", sans-serif;
   font-weight: 200;
@@ -482,7 +483,7 @@ p.phone-number {
 }
 
 h3.footer-email {
-  font-size: 24px;
+  font-size: 20px;
   font-family: "SF Pro Light", sans-serif;
   font-weight: 200;
   color: var(--white);
@@ -496,7 +497,7 @@ p.footer-address {
   box-sizing: border-box;
   color: var(--white);
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
   font-family: "UI Pro Thin", sans-serif;
   font-weight: 900;
