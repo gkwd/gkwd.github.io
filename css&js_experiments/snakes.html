@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --pos: 15px;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      div {
+        background-color: #000;
+        min-width: 40px;
+        min-height: 40px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+      }
+
+      span {
+        width: 500px;
+        height: 5px;
+        margin: 15px;
+        background-color: #fff;
+        position: absolute;
+        transition: 1s;
+      }
+      /* div > span:nth-child(odd) {
+        animation: anim 5s ease-in 0.1s infinite;
+      }
+      div > span:nth-child(even) {
+        animation: anim 5s ease-in 0.5s infinite;
+      } */
+      /* div > span {
+        animation: anim 5s ease-in 0.5s infinite;
+      } */
+      /* div > span:nth-child(3){
+  background-color: #abf09c;
+  bottom: 250px;
+  animation: anim 5s ease-in 0.9s infinite;
+}
+div > span:nth-child(4){
+  background-color: #fc009c;
+  bottom: 10px;
+  animation: anim 5s ease-in 1.4s infinite;
+} */
+
+      @keyframes anim {
+        0%,
+        100% {
+          /* background-color: #1abc9c; */
+          left: -550px;
+        }
+        /* 15% {
+          background-color: #27ae60;
+        }
+        45% {
+          background-color: #e74c3c;
+        } */
+        50% {
+          left: calc(100% + 500px);
+        }
+        /* 60% {
+          background-color: #ecf0f1;
+        }
+        72% {
+          background-color: #f1c40f;
+        }
+        85% {
+          background-color: #8e44ad;
+        }
+        99% {
+          background-color: #3498db;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont"></div>
+
+    <script>
+      let cont = document.getElementById('cont');
+      for (let index = 0; index < 35; index++) {
+        let span = document.createElement('span');
+        cont.appendChild(span)
+      }
+          // TODO Fix the problem
+      let spans = document.querySelectorAll('span');
+      console.log(spans)
+
+      let posy = Math.random() * (document.body.clientHeight - 35).toFixed();
+      let posx = Math.random() * -(document.body.clientHeight + 500).toFixed();
+      function randomHEX() {
+        let n = (Math.random() * 0xfffff * 1000000).toString(16);
+        return '#' + n.slice(0, 6);
+      }
+      spans.forEach(sp => {
+        setInterval(() => {
+          posy = Math.random() * (document.body.clientHeight - 35).toFixed();
+          sp.style.backgroundColor = randomHEX();
+          sp.style.top = posy + 'px';
+        }, 500);
+        // posx = Math.random() * -(document.body.clientHeight + 500).toFixed();
+        // sp.style.left = posx + 'px';
+        sp.style.animation = 'anim 5s ease-in ' +  Math.random()  + 's infinite'
+      });
+
+    </script>
+  </body>
+</html>

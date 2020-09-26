@@ -414,12 +414,12 @@ main {
 }
 h3.employee-name {
   font-size: 22px;
-  font-family: "UI Pro Light", sans-serif;
+  font-family: "SF Pro Light", sans-serif;
   letter-spacing: 2px;
 }
 p.employee-desc {
   font-size: 16px;
-  font-family: "UI Pro Thin", sans-serif;
+  font-family: "SF Pro Thin", sans-serif;
   letter-spacing: 0.02rem;
   line-height: 23px;
 }
@@ -499,7 +499,7 @@ p.footer-address {
   text-align: center;
   font-size: 12px;
   margin: 0;
-  font-family: "UI Pro Thin", sans-serif;
+  font-family: "SF Pro Light", sans-serif;
   font-weight: 900;
   /* color: #fff; */
   /* text-transform: uppercase; */

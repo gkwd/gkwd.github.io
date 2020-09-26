@@ -7,6 +7,10 @@ function fadeOut(time, target) {
     if (fadeTarget.style.opacity > 0) {
       fadeTarget.style.opacity -= 0.01;
       // console.log(fadeTarget.style.opacity);
+<<<<<<< HEAD
+=======
+      
+>>>>>>> f28a06e014bcff3509fed8ba6691b649797ca5fd
     } else {
       console.log(fadeTarget.style.opacity + "removing");
       clearInterval(fadeEffect);
@@ -99,6 +103,13 @@ window.addEventListener("load", () => {
     lines.appendChild(line);
   }
 
+<<<<<<< HEAD
+=======
+  const input = document.getElementById("e-mail");
+  const textArea = document.getElementById("textarea");
+  textArea.style.transform = "scale(0, 0)";
+  // console.log(input);
+>>>>>>> f28a06e014bcff3509fed8ba6691b649797ca5fd
 
 
 
