@@ -32,7 +32,7 @@ coursesWrapper.addEventListener("mousewheel", function (e) {
 let isDown = false;
 let startX;
 let scrollLeft;
-// Thanks for this scripts to https://codepen.io/toddwebdev/pen/yExKoj
+// Thanks for this piece of code to https://codepen.io/toddwebdev/pen/yExKoj
 coursesWrapper.addEventListener('mousedown', (e) => {
   isDown = true;
   coursesWrapper.classList.add('active');

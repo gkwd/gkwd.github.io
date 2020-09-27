@@ -8,6 +8,7 @@
 * * * * * * * * {
   background-color: rgba(255, 252, 87, 0.795);
 } */
+@import './reset.css' all;
 html,
 body {
   background: #fff;

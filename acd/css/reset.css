@@ -68,6 +68,13 @@
     border-radius: 12px;
     font-size: 1.75rem;
   }
+  p {
+    color: inherit;
+  }
+  h1, h2, h3, h4, h5 {
+    color: inherit;
+  }
+  
 
 
   /* width */

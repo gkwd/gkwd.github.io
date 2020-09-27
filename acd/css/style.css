@@ -1,3 +1,4 @@
+@import './reset.css' all;
 /* 
 ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
 ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
@@ -106,6 +107,7 @@
 ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛ 
 **/
 .nav-wrapper .nav-search.hidden .search-bar .search-field {
+  transform-origin: right;
   transform: scaleX(1);
   width: 350px;
 }
@@ -244,7 +246,12 @@ p.ad-description {
   text-transform: uppercase;
   color: #ffffff;
 }
-.top-courses {
+.title.big {
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 121px;
+}
+section, .top-courses {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -299,4 +306,19 @@ p.ad-description {
   text-transform: uppercase;
   color: #FFFFFF;
   user-select: none;
+}
+
+
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+                      Hundred courses
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+**/
+.desc-block {
+  flex: 3 0 33%;
+}
+.img-container {
+  flex: 0 3 66%;
 }
