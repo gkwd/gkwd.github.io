@@ -203,6 +203,59 @@
       .pagination a:hover:not(.active) {
         background-color: #ddd;
       }
+      .answer-options {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .answer-options h3 {
+        display: block;
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 1rem;
+        background-color: #f5f5f5;
+        border-radius: 8px 8px 0 0;
+      }
+      .variant-list {
+        width: 100%;
+        padding: 1rem;
+      }
+      .variant-wrapper {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+      }
+      .variant-label {
+        width: 100%;
+        font-size: 1.4rem;
+      }
+      #variant {
+        width: 100%;
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+        background-color: #f5f5f5;
+        border: 1px solid rgba(0, 0, 0, 0.144);
+      }
+      .math {
+        width: 50px;
+        height: 50px;
+        margin: 0 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 2rem;
+      }
+      .math.plus {
+        background-color: rgb(42, 173, 64);
+      }
+      .math.minus {
+        background-color: rgb(184, 3, 3);
+      }
 
       footer {
         min-width: 150px;
@@ -615,88 +668,224 @@
 
           <div class="content-list" id="questions">
             <form action="" method="" class="row">
-                <div class="col-12 col-md-6">
-                  <label class="input-box" for="assembly-question">
-                    <h5 class="input-title">Вопрос</h5>
-                    <input type="text" name="" id="assembly-question" />
-                  </label>
-                  <label class="input-box" for="assembly-time">
-                    <h5 class="input-title">Время</h5>
-                    <select id="assembly-time">
-                      <option selected disabled>Выберите героя</option>
-                      <option value="Чебурашка">Чебурашка</option>
-                      <option value="Крокодил Гена">Крокодил Гена</option>
-                      <option value="Шапокляк">Шапокляк</option>
-                      <option value="Крыса Лариса">Крыса Лариса</option>
-                    </select>
-                  </label>
-                  <label class="input-box" for="assembly-type-vote">
-                    <h5 class="input-title">Тип голосвания</h5>
-  
-                    <select id="assembly-type-vote">
-                        <option selected disabled>Выберите героя</option>
-                        <option value="Чебурашка">Чебурашка</option>
-                        <option value="Крокодил Гена">Крокодил Гена</option>
-                        <option value="Шапокляк">Шапокляк</option>
-                        <option value="Крыса Лариса">Крыса Лариса</option>
-                      </select>
-                  </label>
-                  <label class="input-box" for="assembly-holders-number">
-                    <h5 class="input-title">Кол-во членов наб.сов. по уставу</h5>
-                    <input type="number" name="" id="assembly-holders-number">
-                  </label>
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="input-box" for="assembly-account">
-                    <h5 class="input-title">Учетная запись</h5>
-                    <select id="assembly-account">
-                      <option selected disabled>Выберите героя</option>
-                      <option value="Чебурашка">Чебурашка</option>
-                      <option value="Крокодил Гена">Крокодил Гена</option>
-                      <option value="Шапокляк">Шапокляк</option>
-                      <option value="Крыса Лариса">Крыса Лариса</option>
-                    </select>
-                  </label>
-                  <label class="input-box" for="assembly-debate">
-                    <h5 class="input-title">Прения</h5>
-                    <select id="assembly-account">
-                        <option selected disabled>Выберите героя</option>
-                        <option value="Чебурашка">Чебурашка</option>
-                        <option value="Крокодил Гена">Крокодил Гена</option>
-                        <option value="Шапокляк">Шапокляк</option>
-                        <option value="Крыса Лариса">Крыса Лариса</option>
-                      </select>
-                  </label>
-                  <label class="input-box" for="assembly-state">
-                    <h5 class="input-title">Состояние</h5>
-                    <select id="assembly-state">
-                        <option selected disabled>Выберите героя</option>
-                        <option value="Чебурашка">Чебурашка</option>
-                        <option value="Крокодил Гена">Крокодил Гена</option>
-                        <option value="Шапокляк">Шапокляк</option>
-                        <option value="Крыса Лариса">Крыса Лариса</option>
-                      </select>
-                  </label>
-                </div>
-                <textarea
-                  name="assembly-description"
-                  id="assembly-description"
-                ></textarea>
-  
+              <div class="col-12 col-md-6">
+                <label class="input-box" for="assembly-question">
+                  <h5 class="input-title">Вопрос</h5>
+                  <input type="text" name="" id="assembly-question" />
+                </label>
+                <label class="input-box" for="assembly-time">
+                  <h5 class="input-title">Время</h5>
+                  <select id="assembly-time">
+                    <option selected disabled>Выберите героя</option>
+                    <option value="Чебурашка">Чебурашка</option>
+                    <option value="Крокодил Гена">Крокодил Гена</option>
+                    <option value="Шапокляк">Шапокляк</option>
+                    <option value="Крыса Лариса">Крыса Лариса</option>
+                  </select>
+                </label>
+                <label class="input-box" for="assembly-type-vote">
+                  <h5 class="input-title">Тип голосвания</h5>
+
+                  <select id="assembly-type-vote">
+                    <option selected disabled>Выберите героя</option>
+                    <option value="Чебурашка">Чебурашка</option>
+                    <option value="Крокодил Гена">Крокодил Гена</option>
+                    <option value="Шапокляк">Шапокляк</option>
+                    <option value="Крыса Лариса">Крыса Лариса</option>
+                  </select>
+                </label>
+                <label class="input-box" for="assembly-holders-number">
+                  <h5 class="input-title">Кол-во членов наб.сов. по уставу</h5>
+                  <input type="number" name="" id="assembly-holders-number" />
+                </label>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="input-box" for="assembly-account">
+                  <h5 class="input-title">Учетная запись</h5>
+                  <select id="assembly-account">
+                    <option selected disabled>Выберите героя</option>
+                    <option value="Чебурашка">Чебурашка</option>
+                    <option value="Крокодил Гена">Крокодил Гена</option>
+                    <option value="Шапокляк">Шапокляк</option>
+                    <option value="Крыса Лариса">Крыса Лариса</option>
+                  </select>
+                </label>
+                <label class="input-box" for="assembly-debate">
+                  <h5 class="input-title">Прения</h5>
+                  <select id="assembly-account">
+                    <option selected disabled>Выберите героя</option>
+                    <option value="Чебурашка">Чебурашка</option>
+                    <option value="Крокодил Гена">Крокодил Гена</option>
+                    <option value="Шапокляк">Шапокляк</option>
+                    <option value="Крыса Лариса">Крыса Лариса</option>
+                  </select>
+                </label>
+                <label class="input-box" for="assembly-state">
+                  <h5 class="input-title">Состояние</h5>
+                  <select id="assembly-state">
+                    <option selected disabled>Выберите героя</option>
+                    <option value="Чебурашка">Чебурашка</option>
+                    <option value="Крокодил Гена">Крокодил Гена</option>
+                    <option value="Шапокляк">Шапокляк</option>
+                    <option value="Крыса Лариса">Крыса Лариса</option>
+                  </select>
+                </label>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-center align-items-center mt-5"
+              >
                 <div
-                  class="d-flex flex-row justify-content-center align-self-center mt-5"
+                  class="answer-options d-flex flex-column align-items-start"
                 >
-                  <button type="submit" class="button mx-2 save px-5">
-                    Сохранить
-                  </button>
-                  <button type="submit" class="button bg-gray px-5">
-                    Отмена
-                  </button>
+                  <h3>&#9776; Варианты голосования</h3>
+
+                  <div class="d-flex flex-column variant-list bg-white">
+                    <div class="row g-0 p-1 variant-wrapper">
+                      <div class="col-9">
+                        <label class="variant-label" for="variant">
+                          Вариант
+                          <input
+                            type="text"
+                            name=""
+                            id="variant"
+                            class="my-3"
+                          />
+                        </label>
+                      </div>
+                      <div class="col-3 d-flex justify-content-center align-items-center">
+                        <button class="math plus">&#43;</button>
+                        <button class="math minus">&#8722;</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column variant-list bg-white">
+                    <div class="row g-0 p-1 variant-wrapper">
+                      <div class="col-9">
+                        <label class="variant-label" for="variant">
+                          Вариант
+                          <input
+                            type="text"
+                            name=""
+                            id="variant"
+                            class="my-3"
+                          />
+                        </label>
+                      </div>
+                      <div class="col-3 d-flex justify-content-center align-items-center">
+                        <button class="math plus">&#43;</button>
+                        <button class="math minus">&#8722;</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column variant-list bg-white">
+                    <div class="row g-0 p-1 variant-wrapper">
+                      <div class="col-9">
+                        <label class="variant-label" for="variant">
+                          Вариант
+                          <input
+                            type="text"
+                            name=""
+                            id="variant"
+                            class="my-3"
+                          />
+                        </label>
+                      </div>
+                      <div class="col-3 d-flex justify-content-center align-items-center">
+                        <button class="math plus">&#43;</button>
+                        <button class="math minus">&#8722;</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </form>
+                <button type="submit" class="button mx-2 save px-5">
+                  Создать
+                </button>
+              </div>
+            </form>
+
+            <table
+            class="my-5"
+            style="width: 100%; border-collapse: collapse"
+            cellpadding="15"
+          >
+            <thead>
+              <tr>
+                <td><h6>Докладчик</h6></td>
+                <td><h6>Время</h6></td>
+                <td><h6>Прерия</h6></td>
+                <td><h6>Вопрос . Решение</h6></td>
+                <td><h6>Состояние</h6></td>
+                <td><h6></h6></td>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Ничего не найдено</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
           </div>
 
-          <div class="content-list" id="files"></div>
+          <div class="content-list" id="files">
+            <form action="" method="" class="row">
+                <div class="col-12 col-md-6">
+                  <label class="input-box" for="assembly-status">
+                    <h5 class="input-title">Связанное голосование</h5>
+                    <select id="assembly-status">
+                      <option selected disabled>Выберите героя</option>
+                      <option value="Чебурашка">Чебурашка</option>
+                      <option value="Крокодил Гена">Крокодил Гена</option>
+                      <option value="Шапокляк">Шапокляк</option>
+                      <option value="Крыса Лариса">Крыса Лариса</option>
+                    </select>
+                  </label>
+                  
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="input-box" for="second-registry">
+                    <h5 class="input-title">Загрузить файл собрания</h5>
+                    <span class="fake-input"> Загрузить файл ... </span>
+                  </label>
+                  <button type="submit" class="upload-btn">Загрузить</button>
+                  <input
+                    type="file"
+                    accept=".xls, .xlsx"
+                    name=""
+                    id="second-registry"
+                    class="inputfile"
+                  />
+                </div>
+              </form>
+              <table
+              class="my-5"
+              style="width: 100%; border-collapse: collapse"
+              cellpadding="15"
+            >
+              <thead>
+                <tr>
+                  <td><h6>Связанное голосование</h6></td>
+                  <td><h6>Имя файла</h6></td>
+                  <td><h6></h6></td>
+
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>Ничего не найдено</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -726,7 +915,7 @@
       </div>
     </footer>
 
-    <script src="./js/script.auth.js"></script>
+    <script src="./js/script.js"></script>
     <script>
       let inputs = document.querySelectorAll(".inputfile");
       let fakeInputs = document.querySelectorAll(".fake-input");
