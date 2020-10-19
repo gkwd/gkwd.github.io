@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./css/assets/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/assets/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css//auth.style.css">
+</head>
+<body>
+    <main class="container-fluid mt-5">
+        <section class="container"> 
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex flex-column justify-content-center devider-right">
+                        <h1 class="page-title"> Авторизация </h1>
+                        <div class="choose-auth d-flex flex-column flex-sm-row justify-content-start align-items-center">
+                            <img src="./img/one-id-auth.svg" alt="" srcset="">
+                            <p class="auth-text ml-3 mb-0">
+                                для
+                                АКЦИОНЕРА, НаблюдателЯ,
+                                Члена счетной комиссии, секретарЯ
+                            </p>
+                        </div>
+                        <div class="choose-auth d-flex flex-column flex-sm-row justify-content-start align-items-center">
+                            <img src="./img/company-auth.svg" alt="" srcset="">
+                            <p class="auth-text ml-3 mb-0">
+                                для
+                                представителя эмитента и юридического лица
+                            </p>
+                        </div>
+                        <div class="choose-auth d-flex flex-column flex-sm-row justify-content-start align-items-center">
+                            <img src="./img/company-auth.svg" alt="" srcset="">
+                            <p class="auth-text ml-3 mb-0">
+                                Авторизация
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center">
+
+                    <div class="form-ctn mx-auto flex-fill">
+                        <form id="oneid" action="" class="flex-column align-items-center">
+                            <h2 class="form-title">
+                                ЭЛЕКТРОННОЕ ГОЛОСОВАНИЕ
+                            </h2>
+                            <p class="form-desc">
+                                Если у вас есть регистрация на ONE ID, вы можете войти с ее помощью или выбрать другой способ
+                            </p>
+                            <button type="submit" class="sign-in">Войти</button>
+                        </form>
+
+                        <form id="reg"  action="" class="flex-column align-items-center">
+                            <h2 class="form-title">
+                                ЭЛЕКТРОННОЕ ГОЛОСОВАНИЕ
+                            </h2>
+                            <p class="form-desc">
+                                Для регистрации на площадке
+                                Электронное голосование
+                                <a href="#">СВЯЖИТЕСЬ С НАМИ</a>
+                            </p>
+                            <input type="text" name="" id="" class="login sign-in-input" placeholder="ЛОГИН" required>
+                            <input type="password" name="" id="" class="sign-in-input" required>
+                            <button type="submit" class="sign-in">Войти</button>
+                        </form>
+
+                        <form id="login" action="" class="flex-column align-items-center">
+                            <h2 class="form-title">
+                                ЭЛЕКТРОННОЕ ГОЛОСОВАНИЕ
+                            </h2>
+                            <input type="text" name="" id="" class="login sign-in-input" placeholder="ЛОГИН" required>
+                            <input type="password" name="" id="" class="sign-in-input" required>
+                            <button type="submit" class="sign-in">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/script.auth.js"></script>
+</body>
+</html>
