@@ -16,7 +16,7 @@
     "787.6fbc3c63.chunk.js.map": "/city-jw/static/js/787.6fbc3c63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fe60c9d.css",
-    "static/js/main.a9fa5b8d.js"
+    "/city-jw/static/css/main.8fe60c9d.css",
+    "/city-jw/static/js/main.a9fa5b8d.js"
   ]
 }
