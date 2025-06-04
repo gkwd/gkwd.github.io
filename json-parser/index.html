@@ -1,0 +1,49 @@
+<!-- https://jsonplaceholder.typicode.com/todos/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@800&family=Raleway:wght@200;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <p>
+    ~/api/user/login &nbsp; &nbsp; &nbsp; POST <br>
+    ~/api/user/get &nbsp; &nbsp; &nbsp; GET<br>
+    ~/api/user/orders/accepted || get-active &nbsp; &nbsp; &nbsp;GET<br>
+    ~/api/user/orders/done || get-story &nbsp; &nbsp; &nbsp; GET<br>
+    ~/api/user/orders/get-not-accepted &nbsp; &nbsp; &nbsp; GET<br>
+    <br>
+    <br>
+    ~/api/order/get-order-by-id &nbsp; &nbsp; POST &nbsp; &nbsp; || &nbsp; &nbsp; ~/get-order/id &nbsp; &nbsp; GET<br>
+    <br>
+    ~/api/order/change-status &nbsp; &nbsp; &nbsp; POST<br><br>
+    Или для каждого статусв свой запрос <br>
+    ~/api/order/accept<br>
+    ~/api/order/ название статуса<br>
+    ~/api/order/ название статуса<br>
+
+    <br>
+    Только не помню было ли в тз такое что курьер <br> модет менять свою фотографию или свои данные
+    если да то <br>
+    ~/api/user/edit &nbsp; &nbsp; &nbsp; POST
+
+
+  </p>
+  <div class="email-wrapper">
+    <input type="text" class="input input-email" placeholder="URL" id="url" required autofocus
+      value="https://jsonplaceholder.typicode.com/users" />
+    <button type="submit" id="send" class="send-btn">Отправить</button>
+  </div>
+
+  <div id="pre"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
