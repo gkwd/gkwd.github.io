@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +12,8 @@
   "devDependencies": {
     "images-folder-optimizer": "^0.0.37",
     "sharp": "^0.34.2"
+  },
+  "dependencies": {
+    "purgecss": "^7.0.2"
   }
 }
