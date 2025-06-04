@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="./css/assets/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/assets/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/profile.style.css" />
+  </head>
+  <body>
+    <!-- <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"> -->
+
+    <header class="container-fluid bg-white">
+      <span id="burger" class="burger"></span>
+      <div
+        class="container justify-content-between d-flex flex-column flex-md-row align-items-center px-3 px-md-4 bg-white"
+      >
+        <div class="logo">
+          <a
+            data-logo-name="Электронное голосование"
+            class="logo-container d-flex flex-row align-items-center"
+          >
+            <img src="./img/lgo.svg" />
+            <span>Центральный депозитарий<br />ценных бумаг</span>
+          </a>
+          <a class="nav-link d-none d-md-flex active px-5" href="#">Создать собрание &#43;</a>
+        </div>
+
+        <nav
+          class="my-2 my-md-0 mr-md-3 d-flex flex-column flex-md-row align-items-center justify-content-end"
+        >
+          <a class="nav-link px-4" href="#">
+            <img src="./img/profile.svg" alt="" /> Профиль</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section class="container my-5">
+      <h1 class="assembly-title mb-5">Мой профиль</h1>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="tab d-flex flex-row flex-wrap">
+            <button
+              type="button"
+              onclick="showSection(event, 'profile')"
+              class="tab-btn active flex-fill"
+            >
+              Персональные данные
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'companies')"
+              class="tab-btn flex-fill"
+            >
+              Мои организации
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'active-meeting')"
+              class="tab-btn flex-fill"
+            >
+              Активные собрания
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'draft')"
+              class="tab-btn flex-fill"
+            >
+              Черновик
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'control-meeting')"
+              class="tab-btn flex-fill"
+            >
+              Архив собраний
+            </button>
+          </div>
+
+          <div class="content-list" id="profile" style="display: block">
+            <form class="d-flex flex-column px-3 my-5">
+              <h4 class="info-name">Ф.И.О</h4>
+              <p class="info-text">Ибрагимов Улугбек Ботырханович</p>
+              <h4 class="info-name">ИНН</h4>
+              <p class="info-text">111111111111</p>
+              <h4 class="info-name">Паспорт</h4>
+              <p class="info-text">ФИ2222222</p>
+              <h4 class="info-name">E-mail</h4>
+              <input class="input-info" type="email" name="email" id="e-mail" />
+              <h4 class="info-name">Телефон</h4>
+              <input
+                class="input-info"
+                pattern="[0-9]{13,}"
+                placeholder="998901234567"
+                type="tel"
+                name="phone"
+                id="phone"
+              />
+              <h4 class="info-name">Пароль</h4>
+              <input
+                class="input-info"
+                type="password"
+                name="password"
+                id="password"
+              />
+              <h4 class="info-name">Повторите пароль</h4>
+              <input
+                class="input-info"
+                type="password"
+                name="c-pass"
+                id="c-pass"
+              />
+
+              <div class="d-flex flex-row align-self-center mt-5">
+                <button type="submit" class="button save px-5">
+                  Обновить персональные данные
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="content-list" id="companies">
+            <div class="company-card row my-4 d-flex align-items-center">
+              <div
+                class="col-12 col-md-3 px2 py-1 company-image d-flex justify-content-center align-items-center"
+              >
+                <img
+                  class=""
+                  src="https://img.etimg.com/thumb/msid-69901533,width-640,resizemode-4,imgsize-114837/about-the-company.jpg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="col-12 col-md-9 px2 py-1">
+                <h2 class="company-name">
+                  <a href="./meetings.html"> IDEAL Green Light </a>
+                </h2>
+                <p class="company-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Temporibus numquam saepe eligendi velit tempore dolores
+                  assumenda rem harum aspernatur veritatis provident nemo esse,
+                  optio accusamus cupiditate eum cum. Architecto, animi.
+                </p>
+                <a href="" class="company-link">glight.uz</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-list" id="active-meeting">
+            <div class="company-card row my-4 d-flex align-items-center">
+              <div
+                class="col-12 col-md-2 px2 py-1 company-image d-flex justify-content-center align-items-center"
+              >
+                <img
+                  class=""
+                  src="https://img.etimg.com/thumb/msid-69901533,width-640,resizemode-4,imgsize-114837/about-the-company.jpg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="col-12 col-md-7 px2 py-1">
+                <h2 class="company-name">Годовое общее собрание акционеров</h2>
+                <p class="company-description m-0">
+                  Состояние собрания <strong>Активно</strong>
+                </p>
+                <p class="company-description">
+                  Начало регистрации на начало собрание
+                  <strong>2020-09-09 20:00</strong>
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-3 px2 py-1 d-flex flex-column justify-content-center align-items-center"
+              >
+              <a href="./createAssembly.html" class="manage-meeting mb-3">Редактирование собрание</a>
+
+                <a href="#" class="manage-meeting">Управлять собранием</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-list" id="draft">
+            <div class="company-card row my-4 d-flex align-items-center">
+              <div
+                class="col-12 col-md-2 px2 py-1 company-image d-flex justify-content-center align-items-center"
+              >
+                <img
+                  class=""
+                  src="https://img.etimg.com/thumb/msid-69901533,width-640,resizemode-4,imgsize-114837/about-the-company.jpg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="col-12 col-md-7 px2 py-1">
+                <h2 class="company-name">Годовое общее собрание акционеров</h2>
+                <p class="company-description m-0">
+                  Состояние собрания <strong>Активно</strong>
+                </p>
+                <p class="company-description">
+                  Начало регистрации на начало собрание
+                  <strong>2020-09-09 20:00</strong>
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-3 px2 py-1 d-flex flex-column justify-content-center align-items-center"
+              >
+              <a href="#" class="manage-meeting">Редактирование собрание</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-list" id="control-meeting">
+                <div class="company-card row my-4 d-flex align-items-center">
+                  <div
+                    class="col-12 col-md-2 px2 py-1 company-image d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      class=""
+                      src="https://img.etimg.com/thumb/msid-69901533,width-640,resizemode-4,imgsize-114837/about-the-company.jpg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="col-12 col-md-7 px2 py-1">
+                    <h2 class="company-name">Годовое общее собрание акционеров</h2>
+                    <p class="company-description m-0">
+                      Состояние собрания <strong>Активно</strong>
+                    </p>
+                    <p class="company-description">
+                      Начало регистрации на начало собрание
+                      <strong>2020-09-09 20:00</strong>
+                    </p>
+                    <p class="company-description">
+                        Начало голосования
+                        <strong>2020-09-09 20:00</strong>
+                      </p>
+                      <p class="company-description">
+                        Завершение собрания
+                        <strong>2020-09-09 20:00</strong>
+                      </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-3 px2 py-1 d-flex flex-column justify-content-center align-items-center"
+                  >
+                  <a href="#" class="manage-meeting mb-3">Редактирование собрание</a>
+    
+                    <a href="#" class="manage-meeting">Управлять собранием</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex align-items-center">
+            <p class="copyright-text my-5 my-md-0">
+              Государственное Предприятие "Центральный Депозитарий Ценных Бумаг"
+              Все права защищены © 2004-2016. При полном или частичном
+              использовании и цитировании материалов, опубликованных на данном
+              сайте, ссылка на официальный сайт обязательна.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-4 d-flex align-items-center justify-content-center"
+          >
+            <img
+              class="logo my-5 my-md-0"
+              src="./img/light-logo.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

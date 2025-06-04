@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>АО</title>
+    <link rel="stylesheet" href="./css/assets/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/assets/bootstrap-grid.min.css" />
+    <!-- <link rel="stylesheet" href="./css/companies.style.css" /> -->
+    <link rel="stylesheet" href="./css/assembly.style.css">
+  </head>
+  <body>
+    <!-- <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"> -->
+
+    <header class="container-fluid bg-white">
+      <span id="burger" class="burger"></span>
+
+      <div
+        class="container justify-content-between d-flex flex-column flex-md-row align-items-center px-3 px-md-4 bg-white"
+      >
+        <div class="logo">
+          <a
+            data-logo-name="Электронное голосование"
+            class="logo-container d-flex flex-row align-items-center"
+          >
+            <img src="./img/lgo.svg" />
+            <span>Центральный депозитарий<br />ценных бумаг</span>
+          </a>
+          <a class="nav-link d-none d-md-flex active px-5" href="#" style="white-space: normal;">Создать собрание &#43;</a>
+        </div>
+
+        <nav
+          class="my-2 my-md-0 mr-md-3 d-flex flex-column flex-md-row align-items-center justify-content-end"
+        >
+          <a class="nav-link px-4" href="./profile.html">
+            <img src="./img/profile.svg" alt="" /> Профиль</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section class="container my-5">
+      <h1 class="assembly-title mb-5">Годовое общее собрание акционеров</h1>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+        <span data-title="Собрание" class="number">
+          1
+        </span>
+        <span class="status">
+          Собрание завершено
+          <span class="status-info proceesed">
+            <!-- &#9745; -->
+            &#x2611;
+          </span>
+          <span class="status-info stopped">
+            <!-- &#9746; -->
+            &#x274E;
+          </span>
+        </span>
+      </div>
+      
+      <div class="row" style="min-height: 400px;">
+        <div class="col-12 col-md-9">
+          <div class="tab d-flex flex-row flex-wrap">
+            <button
+              type="button"
+              onclick="showSection(event, 'agenda')"
+              class="tab-btn active"
+            >
+              Повестка дня
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'questions')"
+              class="tab-btn"
+            >
+              Вопросы
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'comment')"
+              class="tab-btn"
+            >
+              Комментирование
+            </button>
+            <button
+              type="button"
+              onclick="showSection(event, 'control-meeting')"
+              class="tab-btn"
+            >
+              Управлять собранием
+            </button>
+          </div>
+
+          <div class="content-list" id="agenda" style="display: block">
+            <h3 class="content-title">Повестка дня</h3>
+          </div>
+
+          <div class="content-list" id="questions">
+            <!-- <p>
+                        Представление 
+                            Ташкент это столица узбекистана, один из самых населенныx городов в средней азии.
+                            Хотелось еще отметить то что на данный момент известно Что ташкенту более двух-тысяч двухста лет.
+                            ташкент город солнечный и люди в нем добрые и отзывчивые, в городе хорошо сочитаются новые технологии и старинные обычаи
+                            
+
+                            в конце хочу уточнить что Невозможно рассказать о ташкенте в двух минутах поэтому если вы когда нибудь приедете в ташкент буду рад пбыть вашим гидом по этому прекрайшему городу
+                        спасибо за внимание
+                    </p> -->
+          </div>
+
+          <div class="content-list" id="comment"></div>
+
+          <div class="content-list" id="control-meeting"></div>
+        </div>
+        <div class="col-12 col-md-3 py-4 bg-white">
+          <div class="info">
+            <h2 class="info-title">Информационное окно</h2>
+            <div class="scroll-info">
+              <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+              <p class="info-message">Lorem ipsum dolor sit.</p>
+
+            </div>
+          </div>
+          <div class="docs">
+            <h2 class="info-title">Документация к собранию</h2>
+            <div class="scroll-info">
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+              <a href="" class="doc" download="">
+                <img src="./img/doc.svg" alt="" srcset="">
+                <p class="info-message">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex align-items-center">
+            <p class="copyright-text my-5 my-md-0">
+              Государственное Предприятие "Центральный Депозитарий Ценных Бумаг"
+              Все права защищены © 2004-2016. При полном или частичном
+              использовании и цитировании материалов, опубликованных на данном
+              сайте, ссылка на официальный сайт обязательна.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-4 d-flex align-items-center justify-content-center"
+          >
+            <img
+              class="logo my-5 my-md-0"
+              src="./img/light-logo.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
